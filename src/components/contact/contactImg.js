@@ -1,30 +1,50 @@
 import { StaticQuery, graphql,Link } from "gatsby";
 import React from "react";
+import Img from "gatsby-image";
 
 
 
 const ContactImg = () => (
 
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query GetImgContact {
+  wordpressAcfPages(wordpress_id: {eq: 16}) {
+    id
+    acf {
+      contact_img {
+        alt_text
+        source_url
+        localFile {
+          id
+          size
+          childImageSharp {
+            id
+            sizes(maxWidth: 1000) {
+               ...GatsbyImageSharpSizes
+            }
           }
         }
       }
+    }
+  }
+}
     `}
     render={data => (
       console.log(data),
       (
         <div className="col-lg-6 col-md-12 col-12">
                         <div className="image">
-                            <img src="https://theastro.co/les-perles/assets/images/contact-img.jpg" alt="/"/>
+                          <Img
+                             src={
+                               data.wordpressAcfPages.acf.contact_img.localFile
+                                 .childImageSharp.sizes.src
+                             }
+                             sizes={
+                               data.wordpressAcfPages.acf.contact_img.localFile
+                                 .childImageSharp.sizes
+                             }
+                           />
                         </div>
                     </div>
 

@@ -5,25 +5,24 @@ import Img from "gatsby-image";
 
 const TitleBlog = () => (
     <StaticQuery
-    query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query={graphql`
+        query GetContentACC
+        {
+          wordpressAcfPages(wordpress_id: {eq:  39}) {
+            id
+            acf {
+              actualite_title
+
+            }
           }
         }
-      }
-    `}
+            `}
     render={data => (
       console.log(data),
       (
         <div className="col-md-12">
                             <div className="title">
-                                <h2>Nos actulaités à la une</h2>
+                                <h2>{data.wordpressAcfPages.acf.actualite_title} </h2>
                             </div>
                         </div>
       )

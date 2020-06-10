@@ -6,8 +6,8 @@ import Img from "gatsby-image";
 const Banner = () => (
     <StaticQuery
       query={graphql`
-        query GetBannerACC {
-    wordpressAcfPages(wordpress_id: {eq:  39}) {
+        query GetBannerAppt {
+    wordpressAcfPages(wordpress_id: {eq:  20}) {
       id
       acf {
         banner_title

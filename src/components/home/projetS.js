@@ -1,53 +1,69 @@
 import { StaticQuery, graphql,Link } from "gatsby";
 import React from "react";
-
+import Img from "gatsby-image";
 
 
 const ProjetS = () => (
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query GetHomeProjetS {
+  wordpressAcfPages(wordpress_id: {eq:  2}) {
+    id
+    acf {
+      home_vp_title
+      home_vp_text
+      home_vp_button
+      home_vp_image {
+        alt_text
+        source_url
+        localFile {
+          id
+          size
+          childImageSharp {
+            id
+            sizes(maxWidth: 2000) {
+               ...GatsbyImageSharpSizes
+            }
           }
         }
       }
+    }
+  }
+  }
     `}
     render={data => (
       console.log(data),
       (
         <div className="split">
           <div className="container">
-  <div className="row">
-  <div className="col-sm-10">
-  <div className="row">
-      <div className="col-lg-5 col-md-5 col-12">
-          <div className="title">
-              <h2>Vivre dans le perles de l'agdal</h2>
-          </div>
-          <div className="text">
-              <p>Bénéficiant d'une situation privilégiée à Rabat, la résidence Les Perles de l'Agdal est
-                  compsée
-                  d'appartements Haus Standing et qui intègre des espaces verts au coeur de son aménagement
-              </p>
-              <Link className="button" to="/">En savoir plus</Link>
-          </div>
-      </div>
+            <div className="row">
+                <div className="col-lg-5 col-md-6 col-12">
+                    <div className="title">
+                          <h2>{data.wordpressAcfPages.acf.home_vp_title}</h2>
+                    </div>
+                    <div className="text">
 
-      <div className="col-lg-7 col-md-7 col-12">
-          <div className="image">
-              <img src="https://www.theastro.co/les-perles/assets/images/2.jpg" alt="/" / >
-              <img className="shape-a" src="https://www.theastro.co/les-perles/assets/images/logos/a.svg" alt="/"/>
-          </div>
-      </div>
-  </div>
-</div>
-          </div>
+                                <p>{data.wordpressAcfPages.acf.home_vp_text}</p>
+                        <Link className="button" to="/contact">{data.wordpressAcfPages.acf.home_vp_button}</Link>
+                    </div>
+                </div>
+<div className="col-lg-1 none"></div>
+                <div className="col-lg-5 col-md-6 order-1">
+                    <div className="image">
+                      <Img
+                         src={
+                           data.wordpressAcfPages.acf.home_vp_image.localFile
+                             .childImageSharp.sizes.src
+                         }
+                         sizes={
+                           data.wordpressAcfPages.acf.home_vp_image.localFile
+                             .childImageSharp.sizes
+                         }
+                       />
+                        <img className="shape-a" src="https://www.theastro.co/les-perles/assets/images/logos/a.svg" alt="/"/>
+                    </div>
+                </div>
+            </div>
           </div>
       </div>
       )

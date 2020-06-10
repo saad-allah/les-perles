@@ -230,16 +230,16 @@ const Galeries = () => (
 
     <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
-          }
-        }
+      query GetHomeGaleriesSlider {
+      wordpressAcfPages(wordpress_id: {eq:  2}) {
+      id
+      acf {
+      home_appartements_title
+      home_appartements_link_text
+      home_appartements_link
+
+      }
+      }
       }
     `}
     render={data => (
@@ -287,7 +287,7 @@ const Galeries = () => (
              </div>
          </Slider>
          <div className="galeries-button">
-             <Link className="button" to="/">En savoir plus</Link>
+             <Link className="button" to="/galerie">En savoir plus</Link>
          </div>
      </div>
 

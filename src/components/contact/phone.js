@@ -5,27 +5,41 @@ import React from "react";
 
 const Phone = () => (
 
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
-          }
+      query GetPhoneContact
+      {
+        wordpressAcfPages(wordpress_id: {eq: 16}) {
+      id
+      acf {
+        icon_phone {
+        url {
+          alt_text
+          source_url
         }
       }
+        numero_de_telephone
+        format_international
+      }
+    }
+      }
+
     `}
     render={data => (
       console.log(data),
       (
         <div className="col-lg-4 col-md-6 col-12">
                             <div className="gryff">
-                                <img src="https://theastro.co/les-perles/assets/images/logos/phone-contact.svg" alt="/"/>
-                                <p>060606060606</p>
+                              <img
+                                src={data.wordpressAcfPages.acf.icon_phone.url.source_url}
+                                alt={data.wordpressAcfPages.acf.icon_phone.url.alt_text}
+                              />
+                                <p>
+
+
+{data.wordpressAcfPages.acf.format_international}
+                                          
+                                </p>
                             </div>
                         </div>
 

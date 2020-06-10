@@ -4,30 +4,29 @@ import React from "react";
 
 
 const Paragraph = () => (
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query GetContentContact
+      {
+        wordpressAcfPages(wordpress_id: {eq: 16}) {
+          id
+          acf {
+            contact_desc
+            contact_title
           }
         }
       }
+
     `}
     render={data => (
       console.log(data),
       (
         <div className="col-md-12">
                       <div className="title">
-                          <h2>Contact</h2>
+                          <h2> {data.wordpressAcfPages.acf.contact_title}</h2>
                       </div>
                       <div className="desc">
-                          <p>Désirez vous avoir plus d'informations sur votre nouvelle résidence ? Remplissez ce
-                              formulaire de contact. Nous vous réponderont dans les meilleurs délais</p>
+                          <p> {data.wordpressAcfPages.acf.contact_desc}</p>
                       </div>
                   </div>
 

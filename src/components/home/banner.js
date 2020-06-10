@@ -4,38 +4,60 @@ import Img from "gatsby-image";
 
 
 const Banner = () => (
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query GetBannerHome {
+  wordpressAcfPages(wordpress_id: {eq:  2}) {
+    id
+    acf {
+      home_banner_button
+      home_banner_desc
+      home_banner_title
+      home_banner_bg {
+        alt_text
+        source_url
+        localFile {
+          id
+          size
+          childImageSharp {
+            id
+            sizes(maxWidth: 2000) {
+               ...GatsbyImageSharpSizes
+            }
           }
         }
       }
+    }
+  }
+}
     `}
     render={data => (
       console.log(data),
       (
- 
+
         <div className="banner home">
-        <img className="banner-img"
-        src="https://www.theastro.co/les-perles/assets/images/banner.jpg" alt=""/>
+          <Img className="banner-img"
+             src={
+               data.wordpressAcfPages.acf.home_banner_bg.localFile
+                 .childImageSharp.sizes.src
+             }
+             sizes={
+               data.wordpressAcfPages.acf.home_banner_bg.localFile
+                 .childImageSharp.sizes
+             }
+           />
         <div className="overlay"></div>
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <div className="main-title">
-                        <h1>Une situation idéale au coeur de la ville de Rabat</h1>
+                        <h1>{data.wordpressAcfPages.acf.home_banner_title}
+                        </h1>
                     </div>
                     <div className="subtitle">
-                        <p>Appartements d'exeption au finitions de premier choix</p>
+                        <p>{data.wordpressAcfPages.acf.home_banner_desc}</p>
                     </div>
-                    <Link className="button" to="">Découvrir</Link>
+                    <Link className="button" to="/appartements">{data.wordpressAcfPages.acf.home_banner_button}</Link>
                 </div>
             </div>
         </div>

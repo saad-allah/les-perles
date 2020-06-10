@@ -5,32 +5,57 @@ import Img from "gatsby-image";
 
 const Banner = () => (
     <StaticQuery
-    query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query={graphql`
+        query GetBannerContact {
+    wordpressAcfPages(wordpress_id: {eq: 16}) {
+      id
+      acf {
+        banner_title
+        banner_img {
+          alt_text
+          source_url
+          localFile {
+            id
+            size
+            childImageSharp {
+              id
+              sizes(maxWidth: 2000) {
+                 ...GatsbyImageSharpSizes
+              }
+            }
           }
         }
       }
-    `}
+    }
+  }
+      `}
     render={data => (
       console.log(data),
       (
 
         <div className="banner ">
-        <img className="banner-img"
-        src="https://www.theastro.co/les-perles/assets/images/banner.jpg" alt=""/>
+
+        <Img className="banner-img"
+           src={
+             data.wordpressAcfPages.acf.banner_img.localFile
+               .childImageSharp.sizes.src
+           }
+           sizes={
+             data.wordpressAcfPages.acf.banner_img.localFile
+               .childImageSharp.sizes
+           }
+         />
         <div className="overlay"></div>
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <div className="main-title nOm">
-                        <h1>CONTACT</h1>
+
+                          <h1
+                   dangerouslySetInnerHTML={{
+                     __html: data.wordpressAcfPages.acf.banner_title
+                   }}
+                 />
                     </div>
                 </div>
             </div>

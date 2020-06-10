@@ -4,9 +4,9 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./layout.css"
+import "../style/layout.css";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,7 +22,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-     
+
           <main>{children}</main>
           <Footer />
       </>

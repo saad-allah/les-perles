@@ -284,7 +284,7 @@ export default  ({ data }) => {
 
   <div className="col-md-4 col-12">
       <div className="discover">
-          <Link className="decouvrir" to="/">
+          <Link className="decouvrir" to="/appartements">
             Découvrir nos plans d'appartements <img
                   src="https://www.theastro.co/les-perles/assets/images/logos/right.svg" alt=""/></Link>
       </div>
@@ -300,15 +300,15 @@ export default  ({ data }) => {
 
 
 export const query = graphql`
-query {
-  wordpressSiteMetadata {
-    name
-  }
-  wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-    items {
-      title
-      object_slug
-    }
-  }
+query GetHomeAppSlider {
+wordpressAcfPages(wordpress_id: {eq:  2}) {
+id
+acf {
+home_appartements_title
+home_appartements_link_text
+home_appartements_link
+
+}
+}
 }
 `

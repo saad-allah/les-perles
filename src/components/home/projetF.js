@@ -1,56 +1,69 @@
 import { StaticQuery, graphql,Link } from "gatsby";
 import React from "react";
-
-
+import Img from "gatsby-image";
 
 const ProjetF = () => (
-    <StaticQuery
+  <StaticQuery
     query={graphql`
-      query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+      query GetHomeProjetF {
+  wordpressAcfPages(wordpress_id: {eq:  2}) {
+    id
+    acf {
+      home_p_concept_title
+      home_p_concept_text
+      home_p_concept_button
+      home_p_concept_image {
+        alt_text
+        source_url
+        localFile {
+          id
+          size
+          childImageSharp {
+            id
+            sizes(maxWidth: 2000) {
+               ...GatsbyImageSharpSizes
+            }
           }
         }
       }
+    }
+  }
+}
     `}
     render={data => (
       console.log(data),
       (
         <div className="split">
                 <div className="container">
-                <div className="row">
-                    <div className="col-sm-10">
-                      <div className="row">
-                          <div className="col-lg-7 col-md-7  order-0">
-                              <div className="image">
-                                  <img src="https://www.theastro.co/les-perles/assets/images/1.jpg" alt="/"/>
-                                  <img className="shape-r" src="https://www.theastro.co/les-perles/assets/images/logos/r.svg" alt="/"/>
-                              </div>
+                  <div className="row">
+                      <div className="col-lg-6 col-md-6  order-0">
+                          <div className="image">
+                            <Img
+                               src={
+                                 data.wordpressAcfPages.acf.home_p_concept_image.localFile
+                                   .childImageSharp.sizes.src
+                               }
+                               sizes={
+                                 data.wordpressAcfPages.acf.home_p_concept_image.localFile
+                                   .childImageSharp.sizes
+                               }
+                             />
+                              <img className="shape-r" src="https://www.theastro.co/les-perles/assets/images/logos/r.svg" alt="/"/>
                           </div>
-                          <div className="col-lg-5 col-md-5 order-1">
+                      </div>
+                      <div className="col-lg-1 none order-2"></div>
+                      <div className="col-lg-5 col-md-6 order-1">
+                          <div className="text">
+                              <div className="title">
+                                  <h2>{data.wordpressAcfPages.acf.home_p_concept_title}</h2>
+                              </div>
                               <div className="text">
-                                  <div className="title">
-                                      <h2>Projet et concept</h2>
-                                  </div>
-                                  <div className="text">
-                                      <p>Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des
-                                          appartements  R+6
-                                          R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de
-                                          vie à
-                                          la
-                                          fois reposants et pratiques</p>
-                                        <Link className="button" to="">Maquette Orbitale</Link>
-                                  </div>
+                                      <p>{data.wordpressAcfPages.acf.home_p_concept_text}</p>
+                                    <Link className="button" to="/projet-et-concept">{data.wordpressAcfPages.acf.home_p_concept_button}</Link>
                               </div>
                           </div>
                       </div>
-                    </div>
-                </div>
+                  </div>
                 </div>
             </div>
 
