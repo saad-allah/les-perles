@@ -54,8 +54,9 @@ const MenuFooter = () => (
                   </div>
                   <div className="footer-text">
                      <ul>
-                        <li><Link to="pdc.html">Pol de confidetialité RGPD</Link></li>
-                        <li><Link to="sitemap.html">Sitemap</Link></li>
+                        <li><Link to="/politique-de-confidentialite">Pol de confidetialité RGPD</Link></li>
+                        <li><Link to="/site-map">Sitemap</Link></li>
+                        <li><Link to="/mentions-legales">Mentions légales</Link></li>
                      </ul>
                   </div>
                </div>
@@ -65,7 +66,7 @@ const MenuFooter = () => (
                   </div>
                   <div className="footer-text">
                      <ul>
-                        <li><Link to="">Lorem 01 - ipsum dolor sit</Link></li>
+                        <li>Lorem 01 - ipsum dolor sit</li>
                      </ul>
                      <div className="icons">
                         <Link to=""><img src="https://www.theastro.co/les-perles/assets/images/logos/twitter.svg" alt="/"/></Link>
