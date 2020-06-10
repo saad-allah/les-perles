@@ -11,7 +11,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={data.allWordpressPost.edges.node.title}
+        title='Site map'
         description="test"
       />
         <Banner />
