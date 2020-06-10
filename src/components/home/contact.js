@@ -24,8 +24,7 @@ const Contact = () => (
       (
         <div className="contact">
                 <div className="container">
-                    <div className="row justify-content-center">
-                        <div className='col-sm-10'>
+
 <div className='row'>
   <div className="col-md-12">
       <div className="title">
@@ -72,8 +71,7 @@ const Contact = () => (
 </div>
                         </div>
                     </div>
-                </div>
-            </div>
+      
 
       )
     )}
