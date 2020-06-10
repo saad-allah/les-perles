@@ -1,8 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Banner from "../components/projets/banner";
-import Content from "../components/projets/content";
+import Banner from "../components/pdc/banner";
+import Paragraph from "../components/pdc/content";
+
 import SEO from "../components/seo";
 
 export default ({ data }) => {
@@ -12,8 +13,8 @@ export default ({ data }) => {
         title="test"
         description="test"
       />
-    <Banner />
-      <Content />
+        <Banner />
+  <Paragraph />
     </Layout>
   );
 };

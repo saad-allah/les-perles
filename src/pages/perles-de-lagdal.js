@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-
+import Banner from "../components/lesperles/banner";
+import Paragraph from "../components/lesperles/content";
 import SEO from "../components/seo";
 
 export default ({ data }) => {
@@ -10,8 +11,19 @@ export default ({ data }) => {
       <SEO
         title="test"
         description="test"
-      />   
-      page perles de lagdal
+      />
+    <Banner />
+      <div className="vivre">
+          <div className="container">
+              <div className="row">
+                <Paragraph />
+
+
+
+
+              </div>
+          </div>
+      </div>
     </Layout>
   );
 };

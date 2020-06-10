@@ -37,13 +37,13 @@ const Blog = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Layout>
-  <Banner />
-    <Title />
-        <div className="container">
-          <div className="row">
-            <div className="col col-xs-12">
+        <Banner />
+        <div class="page-actualites">
+          <div class="container">
+            <div class="row">
+              <Title />
               <div className="blog-grids">
                 {data.allWordpressPost.edges.map(({ node }) => (
                   <div key={node.slug} className="grid">
@@ -65,7 +65,9 @@ const Blog = () => (
                     <div className="entry-body">
                       <span className="cat">
                         {node.categories &&
-                          node.categories.map(category => `${category.name}, `)}
+                          node.categories.map(
+                            (category) => `${category.name}, `
+                          )}
                       </span>
                       <h3>
                         <Link

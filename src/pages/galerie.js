@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-
+import Banner from "../components/galeries/banner";
+import Paragraph from "../components/galeries/content";
 import SEO from "../components/seo";
 
 export default ({ data }) => {
@@ -10,8 +11,24 @@ export default ({ data }) => {
       <SEO
         title="test"
         description="test"
-      />   
-      page galerie
+      />
+      <Banner
+      />
+      <div class="page-galerie">
+          <div class="container">
+              <div class="row">
+
+
+<Paragraph />
+
+
+
+
+
+              </div>
+          </div>
+      </div>
+
     </Layout>
   );
 };

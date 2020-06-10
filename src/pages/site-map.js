@@ -1,19 +1,21 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Banner from "../components/projets/banner";
-import Content from "../components/projets/content";
+import Banner from "../components/sitemap/banner";
+import Paragraph from "../components/sitemap/content";
+
 import SEO from "../components/seo";
 
 export default ({ data }) => {
+
   return (
     <Layout>
       <SEO
-        title="test"
+        title={data.allWordpressPost.edges.node.title}
         description="test"
       />
-    <Banner />
-      <Content />
+        <Banner />
+  <Paragraph />
     </Layout>
   );
 };

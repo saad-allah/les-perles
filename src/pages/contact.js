@@ -19,8 +19,7 @@ export default ({ data }) => {
       <Banner />
       <div className='contact-wrapper'>
       <div className='container'>
-  <div className='row justify-content-center'>
-<div className='col-sm-10'>
+
 <div className="row">
   <Paragraph />
     <ContactForm />
@@ -29,8 +28,6 @@ export default ({ data }) => {
       <Phone />
       <Email />
 
-</div>
-</div>
 </div>
       </div>
 </div>
