@@ -203,7 +203,7 @@ const HeroSlider = () => {
             </div>
           </div>
           <div className="col-md-5 col-12">
-            <Slider className="big-slider" {...settings}>
+            <Slider className="big-slider">
               <div className="slide">
                 <div className="wrapper">
                   <img
@@ -239,7 +239,7 @@ const HeroSlider = () => {
             </Slider>
           </div>
           <div className="col-md-3 col-10 small">
-            <Slider className="small-slider" {...settings_nav}>
+            <Slider className="small-slider" >
               <div className="slide">
                 <img
                   src="https://www.theastro.co/les-perles/assets/images/3.jpg"
@@ -286,7 +286,7 @@ const HeroSlider = () => {
           <div className="col-md-4 col-12">
             <div className="discover">
               <Link className="decouvrir" to="/appartements">
-                Découvrir nos plans d'appartements{" "}
+                Découvrir nos plans d'appartements
                 <img
                   src="https://www.theastro.co/les-perles/assets/images/logos/right.svg"
                   alt=""

@@ -8,15 +8,29 @@ const ContactHome = () => (
     <StaticQuery
     query={graphql`
       query {
-        wordpressSiteMetadata {
-          name
-        }
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Nav" }) {
-          items {
-            title
-            object_slug
+        wordpressAcfPages {
+            acf {
+              Titre_icon_1
+              Titre_icon_2
+              Titre_icon_3
+              adresse_home_contact
+              email_page_home
+              icon_adresse_home {
+                source_url
+                alt_text
+              }
+              icon_email_home {
+                alt_text
+                source_url
+              }
+              icon_phone_home {
+                source_url
+                alt_text
+              }
+              telephone_f_home
+              telephone_home_contact
+            }
           }
-        }
       }
     `}
     render={data => (

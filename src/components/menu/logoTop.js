@@ -6,21 +6,39 @@ const Logo = () => (
     <StaticQuery
     query={graphql`
       query {
-        wordpressWpApiMenusMenusItems(name: { eq: "Menu Na" }) {
-          items {
-            title
-            object_slug
+        wordpressAcfOptions {
+          options {
+            nav_logo {
+              alt_text
+              source_url
+              localFile {
+                id
+                size
+                childImageSharp {
+                  id
+                  sizes(maxWidth: 2000) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
+            }
           }
         }
       }
     `}
     render={data => (
-      <Link to="/" className="logo navbar-brand">
-        <img
-          src="https://www.theastro.co/les-perles/assets/images/logos/lesperles-logo.svg"
-          alt="test"
-        />
-      </Link>
+
+        <Link className="navbar-brand" to="/">
+          <img className="logo"
+            src={
+              data.wordpressAcfOptions.options.nav_logo.localFile
+                .childImageSharp.sizes.src
+            }
+            alt={
+              data.wordpressAcfOptions.options.nav_logo.alt_text
+            }
+          />
+          </Link>
     )}
   />
 );

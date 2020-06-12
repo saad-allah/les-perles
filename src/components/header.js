@@ -21,33 +21,30 @@ export default class Header extends React.Component {
   render() {
     let menuOpen = this.state.open ? " open" : "";
     return (
-      <header >
-     
-          <nav className="navbar navbar-expand-lg navbar-light" id="se-navbar">
-        
+
+      <header>
+        <nav className="navbar navbar-expand-lg navbar-light" id="se-navbar">
+
               <Logo />
-              <button
-                className="nav-icon-toggle navbar-toggler"
-                data-toggle="collapse"
-                data-target="#se-nav"
-                aria-controls="se-nav"
-                aria-expanded="true"
-                aria-label="Toggle navigation"
-                onClick={this.OpenMenu}
-              >
-                <span className="nav-icon-toggle__box">
-                  <span className="nav-icon-toggle__inner"></span>
-                </span>
-              </button>
-              <div
+            <button
+              className="navbar-toggler"
+               data-toggle="collapse"
+               data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               onClick={this.OpenMenu}
+               >
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
                 className={`collapse navbar-collapse ${menuOpen}`}
-                id="se-nav"
+                id="navbarSupportedContent"
               >
-                <MenuList />
-              </div>
-        
-          </nav>
-   
-      </header>
+            <MenuList />
+            </div>
+
+        </nav>
+    </header>
     );
   }}

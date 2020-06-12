@@ -56,7 +56,7 @@ export default ({ data }) => {
                       </div>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-2.jpg" data-fancybox="images-1"><div class="sly-wrapper img-1">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-2.jpg" data-fancybox="images-1"><div class="sly-wrapper img-1">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -64,7 +64,7 @@ export default ({ data }) => {
                       </div></a>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-3.jpg" data-fancybox="images-2"><div class="sly-wrapper img-2">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-3.jpg" data-fancybox="images-2"><div class="sly-wrapper img-2">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -72,7 +72,7 @@ export default ({ data }) => {
                       </div></a>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-4.jpg" data-fancybox="images-3"><div class="sly-wrapper img-3">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-4.jpg" data-fancybox="images-3"><div class="sly-wrapper img-3">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -80,7 +80,7 @@ export default ({ data }) => {
                       </div></a>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-5.jpg" data-fancybox="images-4"><div class="sly-wrapper img-4">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-5.jpg" data-fancybox="images-4"><div class="sly-wrapper img-4">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -88,7 +88,7 @@ export default ({ data }) => {
                       </div></a>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-6.jpg" data-fancybox="images-5"><div class="sly-wrapper img-5">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-6.jpg" data-fancybox="images-5"><div class="sly-wrapper img-5">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -96,7 +96,7 @@ export default ({ data }) => {
                       </div></a>
                   </div>
                   <div class="col-lg-4 col-md-6 col-12">
-                      <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-7.jpg" data-fancybox="images-6"><div class="sly-wrapper img-6">
+                      <a href="https://www.theastro.co/les-perles/assets/images/gal-7.jpg" data-fancybox="images-6"><div class="sly-wrapper img-6">
                           <div class="overlay"></div>
                           <div class="text">
                               <p>Section A</p>
@@ -108,27 +108,27 @@ export default ({ data }) => {
                             </div>
                         </div>
 
-      <div className="dinon"><a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-2.jpg" data-fancybox="images-1">
+      <div className="dinon"><a href="https://www.theastro.co/les-perles/assets/images/gal-2.jpg" data-fancybox="images-1">
       </a>
 
     </div>
-    <div className="dinon">  <a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-3.jpg" data-fancybox="images-2">
+    <div className="dinon">  <a href="https://www.theastro.co/les-perles/assets/images/gal-3.jpg" data-fancybox="images-2">
     </a>
 
   </div>
-  <div className="dinon"><a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-4.jpg" data-fancybox="images-3">
+  <div className="dinon"><a href="https://www.theastro.co/les-perles/assets/images/gal-4.jpg" data-fancybox="images-3">
   </a>
 
   </div>
-  <div className="dinon"><a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-5.jpg" data-fancybox="images-4">
+  <div className="dinon"><a href="https://www.theastro.co/les-perles/assets/images/gal-5.jpg" data-fancybox="images-4">
   </a>
 
   </div>
-  <div className="dinon"><a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-6.jpg" data-fancybox="images-5">
+  <div className="dinon"><a href="https://www.theastro.co/les-perles/assets/images/gal-6.jpg" data-fancybox="images-5">
   </a>
 
   </div>
-  <div className="dinon"><a href="https://www.theastro.co/les-perles/https://www.theastro.co/les-perles/assets/images/gal-7.jpg" data-fancybox="images-6">
+  <div className="dinon"><a href="https://www.theastro.co/les-perles/assets/images/gal-7.jpg" data-fancybox="images-6">
   </a>
 
   </div>
