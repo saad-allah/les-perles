@@ -9,14 +9,10 @@ import Appratements from "../components/home/appratement";
 import Galerie from "../components/home/galerie";
 import Contact from "../components/home/contact";
 import SEO from "../components/seo";
-import Helmet from "react-helmet";
-import { withPrefix } from "gatsby";
+
 export default ({ data }) => {
   return (
     <Layout>
-      <Helmet>
-        <script async src={withPrefix("file.js")} type="text/javascript"/>
-        </Helmet>
       <SEO
       title="Accueil"
         description="Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques"

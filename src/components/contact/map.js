@@ -23,7 +23,17 @@ const Map = () => (
       console.log(data),
       (
     <>
-    map
+    <div className="map">
+         <div className="container-fluid">
+            <div className="row">
+               <div className="col-lg-12">
+                  <div id='map'></div>
+                  <div id='menu'>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 </>
 
       )

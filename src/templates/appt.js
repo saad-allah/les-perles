@@ -17,6 +17,9 @@ const AppPost = ({ data }) => {
   const { wordpressWpAppartement } = data;
   return (
     <Layout>
+      <Helmet>
+        <script async src={withPrefix("file.js")} />
+        </Helmet>
       <SEO title={wordpressWpAppartement.title} description={wordpressWpAppartement.excerpt} />
 
         <div className="banner ">
@@ -263,9 +266,7 @@ const AppPost = ({ data }) => {
                 </div>
             </div>
         </div>
-        <Helmet>
-          <script async src={withPrefix("file.js")} />
-          </Helmet>
+
     </Layout>
   );
 };

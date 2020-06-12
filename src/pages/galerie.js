@@ -3,17 +3,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Banner from "../components/galeries/banner";
 import Paragraph from "../components/galeries/content";
-//import Galeries from "../components/galeries/galerie";
+import Scripts from "../components/scripts/script";
 
 import SEO from "../components/seo";
-import Helmet from "react-helmet";
-import { withPrefix } from "gatsby";
+
 export default ({ data }) => {
   return (
     <Layout>
-      <Helmet>
-        <script async src={withPrefix("file.js")} type="text/javascript"/>
-        </Helmet>
+<Scripts/>
 
         <SEO
         title="Galerie"
