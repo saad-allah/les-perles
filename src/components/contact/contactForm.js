@@ -13,6 +13,8 @@ const ContactForm = () => (
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
+     <input type="hidden" name="bot-field" />
+   <input type="hidden" name="form-name" value="ontact-form" />
       <div className="form-group">
      <label>
         <input
