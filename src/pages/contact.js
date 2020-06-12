@@ -9,12 +9,14 @@ import ContactImg from "../components/contact/contactImg";
 import Adresse from "../components/contact/adress";
 import Phone from "../components/contact/phone";
 import Email from "../components/contact/email";
+import Helmet from "react-helmet";
+import { withPrefix } from "gatsby";
 export default ({ data }) => {
   return (
     <Layout>
       <SEO
-      title="test"
-      description="test"
+      title="Contact"
+        description="Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques"
       />
       <Banner />
       <div className='contact-wrapper'>
@@ -31,6 +33,9 @@ export default ({ data }) => {
 </div>
       </div>
 </div>
+<Helmet>
+  <script async src={withPrefix("file.js")} />
+  </Helmet>
     </Layout>
   );
 };

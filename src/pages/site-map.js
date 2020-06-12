@@ -12,8 +12,8 @@ export default ({ data }) => {
     <Layout>
       <SEO
         title='Site map'
-        description="test"
-      />
+        description="Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques"
+         />
         <Banner />
   <Paragraph />
     </Layout>

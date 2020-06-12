@@ -13,7 +13,8 @@ const BlogPost = ({ data }) => {
       <div className="banner">
               <div className="overlay"></div>
                 {wordpressPost.featured_media === null ? (
-                  <h1>No featured media</h1>
+                <>
+              </>
                 ) : (
                   <Img className='w100h100'
                     fluid={wordpressPost.featured_media.localFile.childImageSharp.fluid}
@@ -37,7 +38,8 @@ const BlogPost = ({ data }) => {
 
                 <div className="col-md-12">
                     <div className="user">
-                        <div className="img"></div>
+                        <div className="img">
+                        <img src={wordpressPost.author.simple_local_avatar.wordpress_96} /></div>
                         <div className="text">
                             <p>{wordpressPost.author.name}</p>
                             <p><span>Publié le {wordpressPost.date}</span></p>
@@ -79,6 +81,9 @@ export const pageQuery = graphql`
         }
       author {
   name
+  simple_local_avatar {
+  wordpress_96
+}
 }
 
       date(formatString: "DD/MM/YYYY")
