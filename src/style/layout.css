@@ -1646,7 +1646,7 @@ header img.logo {
 .actualites-singlec blockquote p::after {
     content: "";
     position: absolute;
-    background-image: url('https://theastro.co/les-perles/assets/images/logos/quotes.svg');
+    background-image: url('https://theastro.co/les-perles/assets/images/logos/quotes-right.svg');
     width: 40px;
     height: 31px;
     background-size: cover;
@@ -3582,4 +3582,10 @@ margin: 0;
 .w100h100 {
     width:100%; 
     height:100%; 
+}
+.actualites-singlec { margin-bottom: -150px; }                                                 .actualites-singlec .block p>img { width: 100%; margin: 30px auto } 
+.collapse.navbar-collapse.open {
+  height: 100%;
+  display: block;
+  transition: height .4s ease;
 }
