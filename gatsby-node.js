@@ -50,7 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
     const allPosts = result.data.allWordpressPost.edges;
     const appTemplate = path.resolve(`./src/templates/appt.js`);
     const allApps = result.data.allWordpressWpAppartement.edges;
-    const galerieTemplate = path.resolve(`./src/templates/appt.js`);
+    const galerieTemplate = path.resolve(`./src/templates/galerie.js`);
     const allGaleries = result.data.allWordpressWpGaleries.edges;
     allPosts.forEach((element) => {
       createPage({
