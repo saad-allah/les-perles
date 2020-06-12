@@ -2355,6 +2355,9 @@ bottom: 25px;
         width: 45px;
         right: -20px;
     }
+    .small-slider img {
+        margin: 0;
+    }
 }
 
 @media (min-width: 992px) {
