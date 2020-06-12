@@ -226,7 +226,7 @@ const settings = {
 
 
   }
-const Galeries = () => (
+const GaleriesHome = () => (
 
     <StaticQuery
     query={graphql`
@@ -234,12 +234,30 @@ const Galeries = () => (
       wordpressAcfPages(wordpress_id: {eq:  2}) {
       id
       acf {
-      home_appartements_title
-      home_appartements_link_text
-      home_appartements_link
+        home_galerie_title
+        home_galerie_desc_bloc_1
+        home_galerie_desc_bloc_2
+        home_galerie_button
 
       }
       }
+      allWordpressWpGaleries(limit: 10) {
+   nodes {
+     acf {
+       featured_image_for_this_galerie {
+         alt_text
+         source_url
+         localFile {
+           id
+           size
+           childImageSharp {
+             id
+           }
+         }
+       }
+     }
+   }
+ }
       }
     `}
     render={data => (
@@ -248,46 +266,28 @@ const Galeries = () => (
       <div className="galeries">
          <div className="container">
              <div className="row     justify-content-center">
-                 <div className="col-sm-10">
+                 <div className="col-sm-12">
                      <div className="title">
-                         <h2>Galeries</h2>
+                         <h2>{data.wordpressAcfPages.acf.home_galerie_title}</h2>
                      </div>
                      <div className="desc">
-                         <p>Des intérieurs harmonieux, Des superficies divérsifiées</p>
-                         <p>Découvrez une séléction de photos de nos appartements</p>
+                          <p>{data.wordpressAcfPages.acf.home_galerie_desc_bloc_1}</p>
+                            <p>{data.wordpressAcfPages.acf.home_galerie_desc_bloc_2}</p>
                      </div>
                  </div>
              </div>
          </div>
          <Slider className="galerie-slider" {...settings}>
+  {data.allWordpressWpGaleries.nodes.map(({ node }) => (
              <div className="slide">
                  <div className="image">
                      <img src="https://theastro.co/les-perles/assets/images/7.jpg" alt="/"/>
                  </div>
              </div>
-             <div className="slide">
-                 <div className="image">
-                     <img src="https://theastro.co/les-perles/assets/images/8.jpg" alt="/"/>
-                 </div>
-             </div>
-             <div className="slide">
-                 <div className="image">
-                     <img src="https://theastro.co/les-perles/assets/images/9.jpg" alt="/"/>
-                 </div>
-             </div>
-             <div className="slide">
-                 <div className="image">
-                     <img src="https://theastro.co/les-perles/assets/images/10.jpg" alt="/"/>
-                 </div>
-             </div>
-             <div className="slide">
-                 <div className="image">
-                     <img src="https://theastro.co/les-perles/assets/images/7.jpg" alt="/"/>
-                 </div>
-             </div>
+  ))}
          </Slider>
          <div className="galeries-button">
-             <Link className="button" to="/galerie">En savoir plus</Link>
+             <Link className="button" to="/galerie">{data.wordpressAcfPages.acf.home_galerie_button}</Link>
          </div>
      </div>
 
@@ -296,4 +296,4 @@ const Galeries = () => (
   />
 );
 
-export default Galeries;
+export default GaleriesHome;

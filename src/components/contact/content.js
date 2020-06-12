@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const Paragraph = () => (
+const ParagraphContact = () => (
   <StaticQuery
     query={graphql`
       query GetContentContact
@@ -35,4 +35,4 @@ const Paragraph = () => (
   />
 );
 
-export default Paragraph;
+export default ParagraphContact;

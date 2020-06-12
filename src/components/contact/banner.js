@@ -1,9 +1,9 @@
-import { StaticQuery, graphql,Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
 
 
-const Banner = () => (
+const BannerContact = () => (
     <StaticQuery
       query={graphql`
         query GetBannerContact {
@@ -66,4 +66,4 @@ const Banner = () => (
   />
 );
 
-export default Banner;
+export default BannerContact;

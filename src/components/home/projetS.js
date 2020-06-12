@@ -30,6 +30,7 @@ const ProjetS = () => (
     }
   }
   }
+  
     `}
     render={data => (
       console.log(data),
@@ -48,7 +49,7 @@ const ProjetS = () => (
                     </div>
                 </div>
 <div className="col-lg-1 none"></div>
-                <div className="col-lg-5 col-md-6 order-1">
+                <div className="col-lg-6 col-md-6 col-12">
                     <div className="image">
                       <Img
                          src={

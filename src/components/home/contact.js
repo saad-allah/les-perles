@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const Contact = () => (
+const ContactHome = () => (
 
     <StaticQuery
     query={graphql`
@@ -35,7 +35,7 @@ const Contact = () => (
           <p>Choisissez le moyen de contact qui vous convient</p>
       </div>
   </div>
-  <div className="col-lg-4 col-sm-4 col-12">
+  <div className="col-lg-4 col-md-6 col-12">
       <div className="wrapper">
           <div className="icon">
               <img src="https://theastro.co/les-perles/assets/images/logos/mail.svg" alt="/"/>
@@ -46,7 +46,7 @@ const Contact = () => (
           </div>
       </div>
   </div>
-  <div className="col-lg-4 col-sm-4 col-12">
+  <div className="col-lg-4 col-md-6 col-12">
       <div className="wrapper">
           <div className="icon">
               <img src="https://theastro.co/les-perles/assets/images/logos/call.svg" alt="/"/>
@@ -57,7 +57,7 @@ const Contact = () => (
           </div>
       </div>
   </div>
-  <div className="col-lg-4 col-sm-4 col-12">
+  <div className="col-lg-4 col-md-6 col-12">
       <div className="wrapper">
           <div className="icon">
               <img src="https://theastro.co/les-perles/assets/images/logos/pin.svg" alt="/"/>
@@ -71,11 +71,11 @@ const Contact = () => (
 </div>
                         </div>
                     </div>
-      
+
 
       )
     )}
   />
 );
 
-export default Contact;
+export default ContactHome;

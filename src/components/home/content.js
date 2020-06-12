@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const Paragraph = () => (
+const ParagraphHome = () => (
   <StaticQuery
     query={graphql`
       query GetContentHome {
@@ -35,4 +35,4 @@ const Paragraph = () => (
   />
 );
 
-export default Paragraph;
+export default ParagraphHome;

@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet";
+import { withPrefix } from "gatsby";
 import Header from "./header"
-import Footer from "./footer"
+import Footer from "./footer-index"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../style/layout.css";
@@ -10,7 +12,7 @@ import "../style/layout.css";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteTitleQueryIndex {
         site {
           siteMetadata {
             title
@@ -24,7 +26,6 @@ const Layout = ({ children }) => (
 
           <main>{children}</main>
           <Footer />
-
       </>
     )}
   />

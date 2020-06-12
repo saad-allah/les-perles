@@ -3,7 +3,7 @@ import React from "react";
 import Img from "gatsby-image";
 
 
-const Banner = () => (
+const Bannerpdc = () => (
     <StaticQuery
       query={graphql`
         query GetBannerPdc {
@@ -66,4 +66,4 @@ const Banner = () => (
   />
 );
 
-export default Banner;
+export default Bannerpdc;

@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const Paragraph = () => (
+const ParagraphG = () => (
   <StaticQuery
     query={graphql`
       query GetContentGaleries
@@ -32,4 +32,4 @@ const Paragraph = () => (
   />
 );
 
-export default Paragraph;
+export default ParagraphG;

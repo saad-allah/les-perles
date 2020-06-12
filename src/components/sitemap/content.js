@@ -1,22 +1,31 @@
-import { StaticQuery, graphql,Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import React from "react";
 
 
 
-const Paragraph = () => (
+const ParagraphSite = () => (
   <StaticQuery
     query={graphql`
       query GetContentSiteMap
       {
         wordpressAcfPages(wordpress_id: {eq: 18}) {
-      acf {
-        sitemap_img {
-          url {
-            source_url
-            alt_text
-          }
+    id
+    acf {
+  sitemap_img {
+    source_url
+    alt_text
+    localFile {
+      id
+      size
+      childImageSharp {
+        id
+        sizes(maxWidth: 2000) {
+           ...GatsbyImageSharpSizes
         }
       }
+    }
+  }
+}
     }
       }
 
@@ -29,10 +38,13 @@ const Paragraph = () => (
                 <div class="container">
                     <div class="row">
                           <div class="col-12">
-                      <img
-          src={data.wordpressAcfPages.acf.sitemap_img.url.source_url}
-          alt={data.wordpressAcfPages.acf.sitemap_img.url.alt_text}
-        />
+                            <img
+                              src={
+                                data.wordpressAcfPages.acf.sitemap_img.localFile
+                                  .childImageSharp.sizes.src
+                              }
+                              alt={data.wordpressAcfPages.acf.sitemap_img.alt_text}
+                            />
 
   </div>
     </div>
@@ -45,4 +57,4 @@ const Paragraph = () => (
   />
 );
 
-export default Paragraph;
+export default ParagraphSite;
