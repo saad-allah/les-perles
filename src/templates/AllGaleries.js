@@ -12,7 +12,7 @@ console.log(pageContext);
                 allData.map(item=>{
                     return(
                         <div key={`container_${item.node.slug}`}>
-                            <Link to={`/actualites/${item.node.slug}`}> {item.node.title}</Link>
+                            <Link to={`/galerie/${item.node.slug}`}> {item.node.title}</Link>
                         </div>
                     )
                 })
