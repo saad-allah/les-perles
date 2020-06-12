@@ -42,7 +42,7 @@ const ContactHome = () => (
           </div>
           <div className="text">
               <p>Envoyez nous un message</p>
-              <a href="mailto:Perlesdel'agdal@contact.com">Perlesdel'agdal@contact.com</a>
+              <a href="mailto:contact@lesperles.ma">contact@lesperles.ma</a>
           </div>
       </div>
   </div>
@@ -53,7 +53,7 @@ const ContactHome = () => (
           </div>
           <div className="text">
               <p>Contactez nous par téléphone</p>
-              <a href="tel:+21206060606060">0606060606</a>
+              <a href="tel:+212529035035">+212 529 035 035</a>
           </div>
       </div>
   </div>
