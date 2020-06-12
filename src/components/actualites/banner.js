@@ -1,8 +1,6 @@
 import { StaticQuery, graphql,Link } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
-
-
 const BannerAcc = () => (
     <StaticQuery
       query={graphql`
