@@ -203,7 +203,7 @@ const HeroSlider = () => {
             </div>
           </div>
           <div className="col-md-5 col-12">
-            <Slider className="big-slider">
+            <Slider className="big-slider" {...settings}>
               <div className="slide">
                 <div className="wrapper">
                   <img
@@ -239,7 +239,7 @@ const HeroSlider = () => {
             </Slider>
           </div>
           <div className="col-md-3 col-10 small">
-            <Slider className="small-slider" >
+            <Slider className="small-slider" {...settings_nav} >
               <div className="slide">
                 <img
                   src="https://www.theastro.co/les-perles/assets/images/3.jpg"
