@@ -14,6 +14,7 @@ const ContactForm = () => (
       data-netlify-honeypot="bot-field"
     >
       <div className="form-group">
+     <label>
         <input
           type="text"
           className="form-control"
@@ -22,8 +23,10 @@ const ContactForm = () => (
           name="nom"
           placeholder="Nom complet"
         />
+     </label>
       </div>
       <div className="form-group">
+     <label>
         <input
           type="email"
           className="form-control"
@@ -32,8 +35,10 @@ const ContactForm = () => (
           name="Email"
           placeholder="Adresse email"
         />
+     </label>
       </div>
       <div className="form-group">
+     <label>
         <input
           type="tel"
           className="form-control"
@@ -42,8 +47,10 @@ const ContactForm = () => (
           name="Telephonne"
           placeholder="Télephonne"
         />
+     </label>
       </div>
       <div className="form-group">
+     <label>
         <textarea
           className="form-control"
           name="message"
@@ -52,6 +59,7 @@ const ContactForm = () => (
           required="required"
           placeholder="Message"
         ></textarea>
+     </label>
       </div>
       <div className="submit">
         <button className="btn btn-primary mb-2 submit">Envoyer</button>
