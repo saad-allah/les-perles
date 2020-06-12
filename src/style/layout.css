@@ -647,6 +647,7 @@ header img.logo {
 .small-slider img {
     width: 90px;
     border: 2px solid #A1A1A1;
+    margin: 0 auto;
 }
 
 .small {
@@ -919,9 +920,10 @@ header img.logo {
 }
 
 .footer-slider .slide .wrapper {
-    z-index: 2;
+    z-index: 8;
     height: 100%;
     width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -987,7 +989,7 @@ header img.logo {
 }
 
 .footer-slider .wrapper .desc {
-    width: fit-content;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -1233,7 +1235,7 @@ header img.logo {
 }
 
 .page-galerie .desc p {
-    width: 40%;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -1309,47 +1311,46 @@ header img.logo {
 }
 
 .page-galerie .sly-wrapper.img-1 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-galerie .sly-wrapper.img-2 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-galerie .sly-wrapper.img-3 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-galerie .sly-wrapper.img-4 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-5.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-galerie .sly-wrapper.img-5 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-6.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .page-galerie .sly-wrapper.img-6 {
-
+    background-image: url('https://theastro.co/les-perles/assets/images/gal-7.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .page-galerie .sly-wrapper .overlay {
     width: 100%;
     position: absolute;
@@ -1574,10 +1575,11 @@ header img.logo {
     margin-bottom: 5px;
 }
 
-.page-actualites .rav img {
+.page-actualites .rav .image {
     width: 100%;
     margin-bottom: 20px;
 }
+
 
 .page-actualites .rav {
     margin-bottom: 40px;
@@ -1610,6 +1612,57 @@ header img.logo {
     top: -250px;
     margin-bottom: -250px;
 }
+.actualites-singlec blockquote {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 30px 20px;
+    margin: 40px auto;
+}
+.actualites-singlec blockquote::before {
+    content: "";
+    position: absolute;
+    background-color: #0F7168;
+    width: 8px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.actualites-singlec blockquote p {
+    position: relative;
+}
+.actualites-singlec blockquote p::before {
+    content: "";
+    position: absolute;
+    background-image: url('https://theastro.co/les-perles/assets/imagesogos/quotes.svg');
+    width: 40px;
+    height: 31px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: -10%;
+    top: -20px;
+}
+.actualites-singlec blockquote p::after {
+    content: "";
+    position: absolute;
+    background-image: url('https://theastro.co/les-perles/assets/imagesogos/quotes-right.svg');
+    width: 40px;
+    height: 31px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: -10%;
+    bottom: -20px;
+}
+.actualites-singlec blockquote p {
+    font-size: 1.3rem;
+    font-weight: 900;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+
 
 .actualites-singlec .container {
     padding-top: 30px;
@@ -1629,6 +1682,7 @@ header img.logo {
 .actualites-singlec .title .media img {
     width: 25px;
     margin: 0px 5px;
+    margin-bottom: 15px;
 }
 
 .actualites-singlec .user {
@@ -1793,7 +1847,7 @@ header img.logo {
     position: absolute;
     top: 45%;
     width: 45px;
-    right: 10px;
+    right: -5px;
 }
 
 .appartements .wrapped-here .arrows ul li.prev4 {
@@ -1807,7 +1861,7 @@ header img.logo {
     position: absolute;
     top: 45%;
     width: 45px;
-    right: 10px;
+    right: -5px;
 }
 
 .appartements .wrapped-here .arrows ul li.prev5 {
@@ -1841,7 +1895,7 @@ header img.logo {
 .childslider {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
 }
@@ -1923,7 +1977,8 @@ header img.logo {
 }
 
 .childsliderthird img {
-    width: 100%;
+    width: 50%;
+    margin:auto;
     height: auto;
 }
 
@@ -2172,6 +2227,19 @@ header img.logo {
 }
 @media (min-width : 768px) {
 
+
+  .actualites-singlec blockquote {
+padding: 20px 20px;
+}
+.actualites-singlec blockquote p::before {
+left: -50px;
+top: 10px;
+}
+.actualites-singlec blockquote p::after {
+right: -55px;
+bottom: 25px;
+}      
+
     .banner .main-title h1 {
         width: 55%;
     }
@@ -2183,7 +2251,9 @@ header img.logo {
     .banner {
         width: 90%;
     }
-
+    .actualites-singlec .title .media img {
+        margin-bottom: 0px;
+    }
     .split .order-0 {
         order: 1;
     }
@@ -2288,6 +2358,8 @@ header img.logo {
 }
 
 @media (min-width: 992px) {
+
+  
     .container {
         width: 90%;
     }
@@ -2438,7 +2510,25 @@ header img.logo {
     .app-desc .text .thin.margined {
         margin-right: 25px;
     }
-
+    .footer-slider .wrapper .desc {
+        width: 80%;
+        margin: 0 auto;
+    }  
+    .appartements .wrapped-here .arrows ul li.next4 {
+        position: absolute;
+        top: 45%;
+        width: 45px;
+        right: -50px;
+    }
+    .appartements .wrapped-here .arrows ul li.next5 {
+        position: absolute;
+        top: 45%;
+        width: 45px;
+        right: -50px;
+    }
+    .page-galerie .desc p {
+        width: 40%;
+    }
 }
 
 @media (min-width: 1200px) {
