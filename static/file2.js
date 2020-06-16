@@ -1,7 +1,6 @@
 'use strict';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibW91cm5lciIsImEiOiJWWnRiWG1VIn0.j6eccFHpE3Q04XPLI7JxbA';
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'https://data.osmbuildings.org/0.2/rkc8ywdl/style.json',
