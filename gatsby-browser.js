@@ -8,7 +8,7 @@ const addScript = url => {
 export const onClientEntry = () => {
   window.onload = () => {
     addScript("https://cdn.osmbuildings.org/mapbox-gl/0.44.1/mapbox-gl.js")
-      addScript("https://theastro.co/les-perles/assets/scripts/mapboxgl.js")
+    addScript("https://theastro.co/les-perles/assets/scripts/mapboxgl.js")
     addScript("https://unpkg.com/suncalc@1.8.0")
     addScript("https://unpkg.com/gl-matrix@2.3.2/dist/gl-matrix-min.js")
   }
