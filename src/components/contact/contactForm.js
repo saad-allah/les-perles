@@ -6,15 +6,13 @@ import React from "react";
 const ContactForm = () => (
     <div className="col-lg-6 col-md-12 col-12">
   <div className="form">
-    <form
+ <form
       className="contact-form"
-      name="contact-form"
-      method="POST"
+      name="contact-les-perles"
+      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-     <input type="hidden" name="bot-field" />
-   <input type="hidden" name="form-name" value="ontact-form" />
       <div className="form-group">
      <label>
         <input
