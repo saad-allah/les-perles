@@ -12,6 +12,7 @@
         url('./Hartwell-UltralightItalic.woff') format('woff');
     font-weight: 200;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -20,6 +21,7 @@
         url('./Hartwell-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +30,7 @@
         url('./HartwellAlt-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -36,6 +39,7 @@
         url('./Hartwell-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -44,6 +48,7 @@
         url('./HartwellAlt-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -52,6 +57,7 @@
         url('./HartwellAlt-ThinItalic.woff') format('woff');
     font-weight: 100;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -60,6 +66,7 @@
         url('./Hartwell-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -68,6 +75,7 @@
         url('./HartwellAlt-UltralightItalic.woff') format('woff');
     font-weight: 200;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -76,6 +84,7 @@
         url('./Hartwell-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -84,6 +93,7 @@
         url('./HartwellAlt-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -92,6 +102,7 @@
         url('./HartwellAlt-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -100,6 +111,7 @@
         url('./HartwellAlt-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -108,6 +120,7 @@
         url('./Hartwell-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -116,6 +129,7 @@
         url('./HartwellAlt-HeavyItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -124,6 +138,7 @@
         url('./HartwellAlt-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -132,6 +147,7 @@
         url('./Hartwell-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -140,6 +156,7 @@
         url('./Hartwell-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -148,6 +165,7 @@
         url('./HartwellAlt-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -156,6 +174,7 @@
         url('./HartwellAlt-Ultralight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -164,6 +183,7 @@
         url('./Hartwell-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -172,6 +192,7 @@
         url('./HartwellAlt-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -180,6 +201,7 @@
         url('./Hartwell-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -188,6 +210,7 @@
         url('./Hartwell-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -196,6 +219,7 @@
         url('./Hartwell-SemiboldItalic.woff') format('woff');
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -204,6 +228,7 @@
         url('./HartwellAlt-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -212,6 +237,7 @@
         url('./Hartwell-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -220,6 +246,7 @@
         url('./Hartwell-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -228,6 +255,7 @@
         url('./Hartwell-Ultralight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -236,6 +264,7 @@
         url('./HartwellAlt-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -244,6 +273,7 @@
         url('./HartwellAlt-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -252,6 +282,7 @@
         url('./HartwellAlt-SemiboldItalic.woff') format('woff');
     font-weight: 600;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -260,6 +291,7 @@
         url('./Hartwell-ThinItalic.woff') format('woff');
     font-weight: 100;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -268,6 +300,7 @@
         url('HartwellAlt-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -276,6 +309,7 @@
         url('./Hartwell-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -284,6 +318,7 @@
         url('./Hartwell-HeavyItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -292,6 +327,7 @@
         url('./HartwellAlt-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 
