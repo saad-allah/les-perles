@@ -143,9 +143,11 @@ const MenuFooter = () => (
                   </div>
                   <div className="footer-text">
                      <ul>
-                       <a href="#">
-                         {data.wordpressAcfOptions.options.adresse_footer}
-                       </a>
+                  <li>
+                  <a href="#">
+                    {data.wordpressAcfOptions.options.adresse_footer}
+                  </a>
+                  </li>
                      </ul>
                      <div className="icons">
                        {data.wordpressAcfOptions.options.facebook_link === "" ? (
