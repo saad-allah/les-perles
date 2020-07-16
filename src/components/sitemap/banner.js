@@ -30,7 +30,7 @@ const BannerSite = () => (
   }
       `}
     render={data => (
-      console.log(data),
+      
       (
 
         <div className="banner ">

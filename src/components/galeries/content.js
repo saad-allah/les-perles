@@ -1,33 +1,28 @@
-import { StaticQuery, graphql,Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-
-
 
 const ParagraphG = () => (
   <StaticQuery
     query={graphql`
-      query GetContentGaleries
-      {
-        wordpressPage(wordpress_id: {eq:  14}) {
-           content
+      query GetContentGaleries {
+        wordpressAcfPages(wordpress_id: { eq: 14 }) {
+          id
+          acf {
+            galerie_title
+            galerie_desc
+          }
         }
       }
-
     `}
-    render={data => (
-      console.log(data),
-      (
-        <div className="col-md-12">
-                            <div className="title">
-                                <h2>Galerie</h2>
-                            </div>
-                            <div className="desc">
-                                <p>Une sélection d'images de nos appartements hat standing. Découvrez votre nouveay bien
-                                    immobilier de plus prés</p>
-                            </div>
-                        </div>
-
-      )
+    render={(data) => (
+      <div className="col-md-12">
+        <div className="title">
+          <h2>{data.wordpressAcfPages.acf.galerie_title}</h2>
+        </div>
+        <div className="desc">
+          <p>{data.wordpressAcfPages.acf.galerie_desc}</p>
+        </div>
+      </div>
     )}
   />
 );

@@ -1,12 +1,10 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
-import React, { useState } from 'react';
-import Slider from "react-slick";
+import React from 'react';
+
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
 import Right from "../../images/right.svg";
-
-
 
 const HeroSlider = () => {
 
@@ -20,283 +18,99 @@ const HeroSlider = () => {
           home_appartements_link
         }
       }
+      allWordpressWpAppartement( limit: 5) {
+          edges {
+            node {
+              id
+              acf {
+                featured_image {
+                  source_url
+                  alt_text
+                  localFile {
+                    childImageSharp {
+                      resize(width: 851, height:888, quality: 100) {
+                        height
+                        width
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
     }
   `);
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  };
-  const settings_nav = {
-    vertical: true,
 
-    verticalSwiping: true,
+    return (
 
-    dots: false,
-
-    swipeToSlide: true,
-
-    infinite: true,
-
-    arrows: false,
-
-
-    loop: true,
-
-    autoplay: true,
-
-    draggable: true,
-
-    autoplaySpeed: 2000,
-
-    centerMode: false,
-
-    centerPadding: "0px",
-
-    slidesToShow: 3,
-
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1445,
-
-        settings: {
-          mobileFirst: true,
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-        },
-      },
-
-      {
-        breakpoint: 1285,
-
-        settings: {
-          mobileFirst: true,
-
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-
-      {
-        breakpoint: 1100,
-
-        settings: {
-          mobileFirst: true,
-
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-
-      {
-        breakpoint: 900,
-
-        settings: {
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-      {
-        breakpoint: 790,
-
-        settings: {
-          swipe: true,
-
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-
-      {
-        breakpoint: 768,
-
-        settings: {
-          vertical: false,
-
-          verticalSwiping: false,
-
-          swipe: true,
-          arrows: false,
-
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 3,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-
-      {
-        breakpoint: 500,
-
-        settings: {
-          vertical: false,
-
-          verticalSwiping: false,
-
-          swipe: true,
-          arrows: false,
-
-          centerMode: false,
-
-          centerPadding: "0px",
-
-          slidesToShow: 2,
-
-          slidesToScroll: 1,
-
-          swipeToSlide: true,
-        },
-      },
-    ],
-  };
-  return (
-
-    <div className="appartements">
-      <div className="bg"></div>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="title">
-              <h2>Appartements</h2>
+      <div className="appartements">
+        <div className="bg"></div>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="title">
+                   <h2>{data.wordpressAcfPages.acf.home_appartements_title}</h2>
+              </div>
             </div>
-          </div>
-          <div className="col-md-5 col-12">
-            <Slider className="big-slider" {...settings}>
-              <div className="slide">
-                <div className="wrapper">
-                  <img
-                    src="https://www.theastro.co/les-perles/assets/images/3.jpg"
-                    alt="/"
-                  />
-                </div>
-              </div>
-              <div className="slide">
-                <div className="wrapper">
-                  <img
-                    src="https://www.theastro.co/les-perles/assets/images/4.jpg"
-                    alt="/"
-                  />
-                </div>
-              </div>
-              <div className="slide">
-                <div className="wrapper">
-                  <img
-                    src="https://www.theastro.co/les-perles/assets/images/5.jpg"
-                    alt="/"
-                  />
-                </div>
-              </div>
-              <div className="slide">
-                <div className="wrapper">
-                  <img
-                    src="https://www.theastro.co/les-perles/assets/images/6.jpg"
-                    alt="/"
-                  />
-                </div>
-              </div>
-            </Slider>
-          </div>
-          <div className="col-md-3 col-10 small">
-            <Slider className="small-slider" {...settings_nav} >
-              <div className="slide">
-                <img
-                  src="https://www.theastro.co/les-perles/assets/images/3.jpg"
-                  alt="/"
-                />
-              </div>
-              <div className="slide">
-                <img
-                  src="https://www.theastro.co/les-perles/assets/images/4.jpg"
-                  alt="/"
-                />
-              </div>
-              <div className="slide">
-                <img
-                  src="https://www.theastro.co/les-perles/assets/images/5.jpg"
-                  alt="/"
-                />
-              </div>
-              <div className="slide">
-                <img
-                  src="https://www.theastro.co/les-perles/assets/images/6.jpg"
-                  alt="/"
-                />
-              </div>
-            </Slider>
-            <div className="arrows">
-              <ul>
-                <li className="prev2">
-                  <img
-                  src={Down}
-                    alt="/"
-                  />
-                </li>
-                <li className="next2">
-                  <img
-                  src={Up}
-                    alt="/"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
+            <div className="col-md-5 col-12">
+              <div className="big-slider" >
+                  {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
+                <div className="slide" key={i}>
+                  <div className="wrapper">
+                    <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
+                     <div className="zoom">
+                  <a href={node.acf.featured_image.localFile.childImageSharp.resize.src}  data-fancybox >
 
-          <div className="col-md-4 col-12">
-            <div className="discover">
-              <Link className="decouvrir" to="/appartements">
-                Découvrir nos plans d'appartements
-                <img
-                  src="https://www.theastro.co/les-perles/assets/images/logos/right.svg"
-                  alt=""
-                />
-              </Link>
+                   <img src={Zom} alt="/" /></a>
+                  </div>
+                      </div>
+                </div>
+          ))}
+              </div>
+            </div>
+            <div className="col-md-3 col-10 small">
+              <div className="small-slider" >
+                  {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
+                <div className="slide" key={i}>
+                  <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
+                </div>
+          ))}
+              </div>
+              <div className="arrows">
+                <ul>
+                  <li className="prev2">
+                    <img
+                    src={Down}
+                      alt="/"
+                    />
+                  </li>
+                  <li className="next2">
+                    <img
+                    src={Up}
+                      alt="/"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-md-4 col-12">
+              <div className="discover">
+                <Link className="decouvrir" to="/appartements">
+                  {data.wordpressAcfPages.acf.home_appartements_link_text}
+                  <img
+                    src={Right}
+                    alt=""
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-export default HeroSlider;
+    );
+  };
+  export default HeroSlider;

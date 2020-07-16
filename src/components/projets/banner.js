@@ -30,7 +30,7 @@ const BannerProjet = () => (
   }
       `}
     render={data => (
-      console.log(data),
+      
       (
 
         <div className="banner ">

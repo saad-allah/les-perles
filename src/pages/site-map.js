@@ -3,32 +3,65 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Banner from "../components/sitemap/banner";
 import Paragraph from "../components/sitemap/content";
-
-import SEO from "../components/seo";
+import {SEO} from "../components/seo";
 
 export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        title='Site map'
-        description="Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques"
-         />
+    <SEO     title={data.wordpressPage.title}
+              titlefb={data.wordpressPage.yoast.opengraph_title}
+              titletwitter={data.wordpressPage.yoast.twitter_title}
+              description={data.wordpressPage.yoast.metadesc}
+              descriptionFb={data.wordpressPage.yoast.opengraph_description}
+              descriptionTwitter={data.wordpressPage.yoast.twitter_description}
+              imageFb={data.wordpressPage.yoast.opengraph_image.localFile.childImageSharp.resize.src}
+              imageTwitter={data.wordpressPage.yoast.twitter_image.localFile.childImageSharp.resize.src}
+              />
         <Banner />
   <Paragraph />
     </Layout>
   );
 };
 export const pageQuery = graphql`
-  query {
-    allWordpressPost(sort: { fields: [date] }) {
-      edges {
-        node {
-          title
-          excerpt
-          slug
+query {
+  wordpressPage(wordpress_id: { eq: 18 }) {
+    id
+    title
+    yoast {
+      twitter_description
+      twitter_image {
+        source_url
+        alt_text
+        localFile {
+          childImageSharp {
+            resize(width: 1214, height: 1214, quality: 100) {
+              height
+              width
+              src
+            }
+          }
         }
       }
+      twitter_title
+      opengraph_title
+      opengraph_image {
+        source_url
+        alt_text
+        localFile {
+          childImageSharp {
+            resize(width: 1214, height: 1214, quality: 100) {
+              height
+              width
+              src
+            }
+          }
+        }
+      }
+      opengraph_description
+      metakeywords
+      metadesc
     }
   }
+}
 `;

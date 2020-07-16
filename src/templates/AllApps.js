@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-
+import PropTypes from "prop-types"
 const AllApps =props=>{
     const {pageContext} = props
     const {allData}= pageContext

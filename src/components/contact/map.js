@@ -1,11 +1,8 @@
-import { StaticQuery, graphql,Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import Slider from "react-slick";
-
 
 const Map = () => (
-
-    <StaticQuery
+  <StaticQuery
     query={graphql`
       query {
         wordpressSiteMetadata {
@@ -19,24 +16,19 @@ const Map = () => (
         }
       }
     `}
-    render={data => (
-      console.log(data),
-      (
-    <>
-    <div className="map">
-         <div className="container-fluid">
+    render={(data) => (
+      <>
+        <div className="map">
+          <div className="container-fluid">
             <div className="row">
-               <div className="col-lg-12">
-                  <div id='map'></div>
-                  <div id='menu'>
-                  </div>
-               </div>
+              <div className="col-lg-12">
+                <div id="mapContact"></div>
+                <div id="menu"></div>
+              </div>
             </div>
-         </div>
-      </div>
-</>
-
-      )
+          </div>
+        </div>
+      </>
     )}
   />
 );

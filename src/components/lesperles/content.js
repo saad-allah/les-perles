@@ -19,7 +19,7 @@ const ParagraphLes = () => (
 
     `}
     render={data => (
-      console.log(data),
+      
       (
         <div className="col-md-12">
                             <div className="title vivre">

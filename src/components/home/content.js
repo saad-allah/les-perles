@@ -16,7 +16,7 @@ const ParagraphHome = () => (
 }
     `}
     render={data => (
-      console.log(data),
+      
       (
         <div className="section1">
         <div className="container">

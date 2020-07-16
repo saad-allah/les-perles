@@ -1,43 +1,61 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import React from "react";
-import { useLightbox } from 'simple-react-lightbox'
-import PropTypes from 'prop-types';
+import Img from "gatsby-image";
+import Right from "../../images/right-arrow.svg";
+import Left from "../../images/left-arrow.svg";
+const GalerieG = () => (
+  <StaticQuery
+    query={graphql`
+      query GetContentGaleriesSliderShow {
+        wordpressAcfPages(wordpress_id: { eq: 14 }) {
+          id
+          acf {
+            slider_show {
+              image {
+                alt_text
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1500) {
+                      ...GatsbyImageSharpFluid_withWebp
+                    }
+                    resize(width: 1110, height: 380, quality: 100) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div className="col-md-12 slider-wrapper">
+        <div className="g-slider">
+          {data.wordpressAcfPages.acf.slider_show.map((item, i) => (
+            <div className="slide" key={i}>
+              <div className="image">
+                <img
+                  src={item.image.localFile.childImageSharp.resize.src}
+                  alt={item.image.alt_text}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="arrows">
+          <ul>
+            <li className="prev3 ">
+              <img src={Left} alt="/" />
+            </li>
+            <li className="next3">
+              <img src={Right} alt="/" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    )}
+  />
+);
 
-const ImageCover = ({props })=> {
-    const { openLightbox } = useLightbox()
-  const data = useStaticQuery(graphql`
-     query {
-    wordpressAcfPages(wordpress_id: {eq:  14}) {
-      acf {
-        banner_title
-         }
-       }
-     }
-   `);
-
-  return (
-    <div className="col-md-12">
-                        <div className="title">
-                            <h2>Galerie</h2>
-                              <h1
-                       dangerouslySetInnerHTML={{
-                         __html: data.wordpressAcfPages.acf.banner_title
-                       }}
-                     />
-                        </div>
-                        <div className="desc">
-                            <p>Une sélection d'images de nos appartements hat standing. Découvrez votre nouveay bien
-                                immobilier de plus prés</p>
-                        </div>
-                        <button
-     onClick={() => openLightbox(props.imageToOpen)}
-   >
-     Open the lightbox
-   </button>
-                    </div>
-  );
-};
-ImageCover.propTypes = {
-  props: PropTypes.func,
-};
-export default ImageCover;
+export default GalerieG;

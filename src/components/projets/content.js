@@ -15,7 +15,6 @@ const ParagraphProjet = () => (
 
     `}
     render={data => (
-      console.log(data),
       (
         <div className="projet-title">
                 <div className="container">

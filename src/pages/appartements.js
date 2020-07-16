@@ -1,54 +1,122 @@
 import React from "react";
 
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Banner from "../components/appartements/banner";
 import Titre from "../components/appartements/content";
-import ListApp1 from "../components/appartements/ListApp1";
-import ListApp2 from "../components/appartements/ListApp2";
-import ListApp3 from "../components/appartements/ListApp3";
-import ListApp4 from "../components/appartements/ListApp4";
-import SEO from "../components/seo";
+import ListApp from "../components/appartements/ListApp";
+import ListAppSlider from "../components/appartements/ListAppSlider";
+import { SEO } from "../components/seo";
 import Scripts from "../components/scripts/script";
 import "../templates/slick.css";
 
 export default ({ data }) => {
-  return (
-    <Layout>
-<Scripts />
-      <SEO
-      title="Appartement"
-        description="Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques"
-      />
+  function dedupeCategories(data) {
+    const uniqueCategories = new Set();
+    // Iterate over all articles
+    data.allWordpressWpAppartement.edges.forEach(({ node }) => {
+      // Iterate over each category in an article
+      node.categories.forEach((category) => {
+        uniqueCategories.add(category.name);
+      });
+    });
+    // Create new array with duplicates removed
+    return Array.from(uniqueCategories);
+  }
+  const dedupedCategories = dedupeCategories(data);
+  return ((
+      <Layout>
+        <Scripts />
+        <SEO
+          title={data.wordpressPage.title}
+          titlefb={data.wordpressPage.yoast.opengraph_title}
+          titletwitter={data.wordpressPage.yoast.twitter_title}
+          description={data.wordpressPage.yoast.metadesc}
+          descriptionFb={data.wordpressPage.yoast.opengraph_description}
+          descriptionTwitter={data.wordpressPage.yoast.twitter_description}
+          imageFb={data.wordpressPage.yoast.opengraph_image.localFile.childImageSharp.resize.src}
+          imageTwitter={data.wordpressPage.yoast.twitter_image.localFile.childImageSharp.resize.src}
+        />
         <Banner />
-      <div className="appartements">
-            <div className="container">
-                <div className="row">
-  <Titre />
-    <ListApp1 />
-      <ListApp2 />
-        <ListApp4/>
-          <ListApp3 />
-                </div>
+        <div className="appartements">
+          <div className="container">
+            <div className="row">
+              <Titre />
             </div>
+            {dedupedCategories.map(({ node }, i) => (
+              <div key={i} className="row">
+                <div className="col-md-12">
+                  <div className="title small">
+                    <h3>Type : {dedupedCategories[i]}</h3>
+                  </div>
+                </div>
 
+                {i < 2 && (
+              <ListAppSlider catName={dedupedCategories[i]} catId={i}/>
+                )}
+              {i > 1 && (
+                <ListApp catName={dedupedCategories[i]}/>
+        )}
+                </div>
+
+            ))}
+          </div>
         </div>
-    </Layout>
+      </Layout>
+    )
   );
 };
 export const pageQuery = graphql`
   query {
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressWpAppartement(sort: { fields: categories___name }) {
       edges {
         node {
           title
-          excerpt
-          slug
+          date(formatString: "MMMM Do, YYYY")
+          categories {
+            name
+          }
         }
       }
     }
-
-
+    wordpressPage(wordpress_id: { eq: 20 }) {
+      id
+      title
+      yoast {
+        twitter_description
+        twitter_image {
+          source_url
+          alt_text
+          localFile {
+            childImageSharp {
+              resize(width: 1214, height: 1214, quality: 100) {
+                height
+                width
+                src
+              }
+            }
+          }
+        }
+        twitter_title
+        opengraph_title
+        opengraph_image {
+          source_url
+          alt_text
+          localFile {
+            childImageSharp {
+              resize(width: 1214, height: 1214, quality: 100) {
+                height
+                width
+                src
+              }
+            }
+          }
+        }
+        opengraph_description
+        metakeywords
+        metadesc
+      }
+    }
   }
 `;

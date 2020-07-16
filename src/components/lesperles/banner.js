@@ -30,7 +30,7 @@ const BannerLes = () => (
   }
       `}
     render={data => (
-      console.log(data),
+      
       (
 
         <div className="banner ">
