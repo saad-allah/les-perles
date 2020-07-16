@@ -1,0 +1,27 @@
+.flex-center img {
+    width: 20%;
+    margin-bottom: 15px;
+}
+.flex-center h1 {
+  font-family: 'Hartwell';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.position-r {
+    position: relative;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.full-height {
+    color: #530047;
+    height: 100vh;
+}

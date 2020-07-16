@@ -663,6 +663,7 @@ header img.logo {
     position: absolute;
     top: -40px;
     width: 35px;
+        cursor: pointer;
     left: 42px;
 }
 
@@ -670,6 +671,7 @@ header img.logo {
     position: absolute;
     bottom: -30px;
     width: 35px;
+    cursor: pointer;
     left: 42px;
 }
 
@@ -787,6 +789,10 @@ header img.logo {
 .contact .wrapper .icon {
     margin: 0 auto;
     width: 30px;
+}
+
+.contact .wrapper .icon img{
+    width: 100%;
 }
 
 .contact .wrapper .text {
@@ -1126,7 +1132,7 @@ header img.logo {
 /* contact */
 .contact-wrapper {
     width: 100%;
-    margin: 50px auto;
+    margin: 50px auto 0;
 }
 
 .contact-wrapper .desc p {
@@ -1221,11 +1227,19 @@ header img.logo {
     width: 100%;
     height: 500px;
 }
+#mapContact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+}
 
 .map .marker {
-    width: 30px;
-    height: 30px;
-    background-size: cover;
+  width: 30px;
+height: 30px;
+background-image: url(../images/pin.svg);
+background-size: cover;
 }
 
 /* galerie */
@@ -1240,9 +1254,7 @@ header img.logo {
 }
 
 .page-galerie .container .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex
 }
 
 .page-galerie .g-slider .slide .image img {
@@ -1310,47 +1322,7 @@ header img.logo {
     margin-top: 30px;
 }
 
-.page-galerie .sly-wrapper.img-1 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.page-galerie .sly-wrapper.img-2 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-3.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.page-galerie .sly-wrapper.img-3 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-4.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.page-galerie .sly-wrapper.img-4 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-5.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.page-galerie .sly-wrapper.img-5 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.page-galerie .sly-wrapper.img-6 {
-    background-image: url('https://theastro.co/les-perles/assets/images/gal-7.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .page-galerie .sly-wrapper .overlay {
     width: 100%;
     position: absolute;
@@ -1539,12 +1511,11 @@ header img.logo {
 /*actualites */
 .page-actualites {
     width: 100%;
-    margin: 50px auto;
+    margin: 50px auto 50px;
 }
 
 .page-actualites .container .row {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -1610,7 +1581,7 @@ header img.logo {
     position: relative;
     background-color: #E5EFEF;
     top: -250px;
-    margin-bottom: -250px;
+    margin-bottom: -180px;
 }
 .actualites-singlec blockquote {
     position: relative;
@@ -1634,7 +1605,7 @@ header img.logo {
 .actualites-singlec blockquote p::before {
     content: "";
     position: absolute;
-    background-image: url('https://theastro.co/les-perles/assets/images/logos/quotes.svg');
+    background-image: url('../images/quotes.svg');
     width: 40px;
     height: 31px;
     background-size: cover;
@@ -1646,7 +1617,7 @@ header img.logo {
 .actualites-singlec blockquote p::after {
     content: "";
     position: absolute;
-    background-image: url('https://theastro.co/les-perles/assets/images/logos/quotes-right.svg');
+    background-image: url('../images/quotes-right.svg');
     width: 40px;
     height: 31px;
     background-size: cover;
@@ -1736,7 +1707,6 @@ header img.logo {
 .actualites-singlec .user-cred span {
     font-weight: 900;
 }
-
 .actualites-singlec .quote {
     position: relative;
     width: 100%;
@@ -1817,6 +1787,10 @@ header img.logo {
     font-weight: bold;
     color: #037168;
 }
+.appartements .text i ,.projet-slider .wrapour .text i{
+    font-style: normal;
+    text-transform: uppercase;
+}
 
 .appartements .text a.buttons {
     background-color: #037168;
@@ -1854,6 +1828,7 @@ header img.logo {
     position: absolute;
     top: 45%;
     width: 45px;
+    cursor: pointer;
     left: 10px;
 }
 
@@ -1873,6 +1848,7 @@ header img.logo {
 
 .appartements .wrapped-here .arrows ul li img {
     width: 20px;
+    cursor: pointer;
 }
 
 .appartements .solo {
@@ -2238,7 +2214,7 @@ top: 10px;
 .actualites-singlec blockquote p::after {
 right: -55px;
 bottom: 25px;
-}      
+}
 
     .banner .main-title h1 {
         width: 55%;
@@ -2362,7 +2338,7 @@ bottom: 25px;
 
 @media (min-width: 992px) {
 
-  
+
     .container {
         width: 90%;
     }
@@ -2516,7 +2492,7 @@ bottom: 25px;
     .footer-slider .wrapper .desc {
         width: 80%;
         margin: 0 auto;
-    }  
+    }
     .appartements .wrapped-here .arrows ul li.next4 {
         position: absolute;
         top: 45%;
@@ -2620,7 +2596,7 @@ bottom: 25px;
     text-align: center;
     padding: 30px 0
   }*/
-  
+
   .mapboxgl-missing-css {
     display: none
   }
@@ -2630,27 +2606,26 @@ bottom: 25px;
   }
   */
   #map {
-    position: relative;
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    height: auto;
+    width: 100%;
+    height: 500px !important;
   }
-  
+
   #map {
     height: 60vh;
   }
-  
+
   .map-warpp {
     position: absolute;
     z-index: 10;
   }
-  
+
   input {
     width: calc(100% - 6em)
   }
-  
+
   #viz {
     position: absolute;
     height: 100%;
@@ -2660,102 +2635,104 @@ bottom: 25px;
     pointer-events: none;
     z-index: 1;
   }
-  
+
   #circle {
     fill: none;
     stroke: black;
     stroke-width: 2px;
   }
-  
+
   #sun-dir {
     stroke: #aaa;
     stroke-width: 7px;
   }
-  
+
   #sun-pos {
     stroke: orange;
     stroke-width: 7px;
   }
-  
+
   #sunrise {
     stroke: yellow;
     stroke-width: 4px;
   }
-  
+
   #sunset {
     stroke: #f73;
     stroke-width: 4px;
   }
-  
+
   #sun, #eye, #sunset-icon, #sunrise-icon {
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  
+
   #sun {
     stroke: orange;
     fill: yellow;
   }
-  
+
   #sunrise-icon, #sunset-icon {
     fill: none;
     stroke: #777;
   }
-  
+
   #eye {
     stroke: black;
     fill: white;
   }
-  
+
   .warpp {
     width: 40%;
     margin: auto;
   }
-  
+
   #day {
-    margin: 50px 0
+    margin: 20px 0;
+    width:100%;
   }
-  
+
   #time {
-    margin: 0 0 50px 0
+    margin: 0 0 20px 0;
+    width: 100%
   }
-  
+
   .range-slider__range {
     -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background-image: #d7dcdf;
-    outline: none;
-    padding: 0;
-    margin: 0;
+     width: 100%;
+     height: 8px;
+     border-radius: 5px;
+     background-color: #ebebe4;
+     outline: none;
+     padding: 0;
+     margin: 0;
   }
-  
+
   .range-slider__range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 40px;
-    height: 40px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    /* background-image: url(season.svg); */
+    background-color: #007168;
     background-size: cover;
     cursor: pointer;
     -webkit-transition: background .15s ease-in-out;
     transition: background .15s ease-in-out;
   }
-  
+
   .range-slider__range::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border: 0;
-    border-radius: 50%;
-    background: #2c3e50;
-    cursor: pointer;
-    -moz-transition: background .15s ease-in-out;
-    transition: background .15s ease-in-out;
+    width: 15px;
+     height: 15px;
+     border: 0;
+     border-radius: 50%;
+     background-color: #007168;
+     cursor: pointer;
+     -moz-transition: background .15s ease-in-out;
+     transition: background .15s ease-in-out;
   }
-  
+
   .range-slider__value {
     display: inline-block;
     position: relative;
@@ -2768,42 +2745,42 @@ bottom: 25px;
     padding: 5px 10px;
     margin-left: 8px;
   }
-  
+
   ::-moz-range-track {
     background: #d7dcdf;
     border: 0;
   }
-  
+
   input::-moz-focus-inner,
   input::-moz-focus-outer {
     border: 0;
   }
-  
+
   @media (max-width:992px) {
     .h500 #map {
       height: 60vh;
     }
-  
+
     .range-slider__range {
       -webkit-appearance: none;
       height: 10px;
       margin-top: 30px;
     }
-  
+
     .range-slider__range::-moz-range-thumb {
       width: 70px;
       height: 70px;
     }
-  
+
     .range-slider__range::-webkit-slider-thumb {
       width: 70px;
       height: 70px;
     }
-  
+
     /*body {
       padding: 0 30px;
     }*/
-  
+
    /* .logo {
       width: 40%;
       margin: auto;
@@ -2822,11 +2799,11 @@ bottom: 25px;
       width: 100%;
       margin: auto;
     }
-  
+
     #day {
       margin: 120px 0 150px
     }
-  
+
     #time {
       margin: 0 0 50px 0
     }
@@ -2838,17 +2815,17 @@ bottom: 25px;
   body {
     margin: 0;
   }
-  
+
   #map {
     width: 100%;
     height: 100%;
     position: absolute;
   }
-  
+
   .time-control {
-   
+
   }
-  
+
   #date{
     display: none;
   }
@@ -2878,7 +2855,7 @@ bottom: 25px;
     left: 0;
     display: none;
     float: left;
-    min-width: 160px;
+    width: 250px;
     margin: 2px 0 0;
     list-style: none;
     background-color: #fff;
@@ -2888,15 +2865,11 @@ bottom: 25px;
     -moz-background-clip: padding;
     background-clip: padding-box;
   }
-  #kimono-sunAnimator {
-    bottom: 10px;
-    left: 10px;
-  }
-  
+
+
   .dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
-    top: auto;
-    bottom: 100%;
     margin-bottom: 1px;
+    bottom: unset;
   }
   #kimono-sunAnimatorMenu {
       position: absolute;
@@ -2914,14 +2887,14 @@ bottom: 25px;
       font-weight: 700;
       position: initial
   }
-  
+
   #kimono-sunAnimatorMenu .noUi-horizontal {
       width: 60%;
       margin: 15px auto auto;
       display: inline-block;
       vertical-align: middle
   }
-  
+
   #kimono-sunAnimatorMenu .noUi-handle {
       cursor: e-resize;
       border-color: #ffb90c;
@@ -2929,7 +2902,7 @@ bottom: 25px;
       -webkit-box-shadow: none;
       box-shadow: none
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-sunPositionBtn {
       display: inline-block;
       width: 20%;
@@ -2939,11 +2912,11 @@ bottom: 25px;
       vertical-align: middle;
       font-weight: 700
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-sunPositionBtn:hover {
       color: #0dabd0
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-indicEst,
   #kimono-sunAnimatorMenu .kimono-indicWest {
       position: absolute;
@@ -2960,15 +2933,15 @@ bottom: 25px;
       -ms-animation: scaleIn ease .3s;
       animation: .3s scaleIn
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-indicEst {
       left: 50px
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-indicWest {
       right: 50px
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line {
       background: rgba(255, 255, 255, .4);
       width: 1px;
@@ -2987,7 +2960,7 @@ bottom: 25px;
       -ms-animation: fadeInAnimation ease 1s;
       animation: 1s fadeInAnimation
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line1 {
       -webkit-transform: rotateZ(-75deg);
       -moz-transform: rotateZ(-75deg);
@@ -2995,7 +2968,7 @@ bottom: 25px;
       -ms-transform: rotateZ(-75deg);
       transform: rotateZ(-75deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line2 {
       -webkit-transform: rotateZ(-60deg);
       -moz-transform: rotateZ(-60deg);
@@ -3003,7 +2976,7 @@ bottom: 25px;
       -ms-transform: rotateZ(-60deg);
       transform: rotateZ(-60deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line3 {
       -webkit-transform: rotateZ(-45deg);
       -moz-transform: rotateZ(-45deg);
@@ -3011,7 +2984,7 @@ bottom: 25px;
       -ms-transform: rotateZ(-45deg);
       transform: rotateZ(-45deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line4 {
       -webkit-transform: rotateZ(-30deg);
       -moz-transform: rotateZ(-30deg);
@@ -3019,7 +2992,7 @@ bottom: 25px;
       -ms-transform: rotateZ(-30deg);
       transform: rotateZ(-30deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line5 {
       -webkit-transform: rotateZ(-15deg);
       -moz-transform: rotateZ(-15deg);
@@ -3027,7 +3000,7 @@ bottom: 25px;
       -ms-transform: rotateZ(-15deg);
       transform: rotateZ(-15deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line7 {
       -webkit-transform: rotateZ(15deg);
       -moz-transform: rotateZ(15deg);
@@ -3035,7 +3008,7 @@ bottom: 25px;
       -ms-transform: rotateZ(15deg);
       transform: rotateZ(15deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line8 {
       -webkit-transform: rotateZ(30deg);
       -moz-transform: rotateZ(30deg);
@@ -3043,7 +3016,7 @@ bottom: 25px;
       -ms-transform: rotateZ(30deg);
       transform: rotateZ(30deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line9 {
       -webkit-transform: rotateZ(45deg);
       -moz-transform: rotateZ(45deg);
@@ -3051,7 +3024,7 @@ bottom: 25px;
       -ms-transform: rotateZ(45deg);
       transform: rotateZ(45deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line10 {
       -webkit-transform: rotateZ(60deg);
       -moz-transform: rotateZ(60deg);
@@ -3059,7 +3032,7 @@ bottom: 25px;
       -ms-transform: rotateZ(60deg);
       transform: rotateZ(60deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line11 {
       -webkit-transform: rotateZ(75deg);
       -moz-transform: rotateZ(75deg);
@@ -3067,7 +3040,7 @@ bottom: 25px;
       -ms-transform: rotateZ(75deg);
       transform: rotateZ(75deg)
   }
-  
+
   #kimono-sunAnimatorMenu .kimono-line.line1,
   #kimono-sunAnimatorMenu .kimono-line.line11,
   #kimono-sunAnimatorMenu .kimono-line.line3,
@@ -3076,11 +3049,11 @@ bottom: 25px;
   #kimono-sunAnimatorMenu .kimono-line.line9 {
       background: rgba(255, 255, 255, .2)
   }
-  
+
   #kimono-sunAnimatorMenu #kimono-sunSvg {
       position: absolute
   }
-  
+
   #kimono-sunPositionAnimation {
       position: relative;
       width: 100%;
@@ -3090,9 +3063,9 @@ bottom: 25px;
       background-size: 100%;
       overflow: hidden
   }
-  
+
   #kimono-sky {
-      background: url(https://res.bienici.com/cacheForever/fc36844174cb9f4523d6f90c24d509773b2c266d/images/sky.jpg) 0 0/auto 100%;
+      background: url(../images/sky.jpg) 0 0/auto 100%;
       position: absolute;
       left: 0;
       -webkit-transform: scaleX(1000);
@@ -3108,29 +3081,10 @@ bottom: 25px;
       bottom: 0;
       background-position-x: 0
   }
-  
-  #kimono-sunAnimator {
-      bottom: 10px;
-      left: 10px
-  }
-  
-  .kimono-ground {
-      position: absolute;
-      bottom: 0;
-      background: url(https://res.bienici.com/cacheForever/3cc3857fb9c9550f2391663895d53efd35dcb9cc/images/skyline.png) 0 0/cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100px;
-      -webkit-animation: .5s slideUpAnimation2;
-      -moz-animation: .5s slideUpAnimation2;
-      -o-animation: .5s slideUpAnimation2;
-      -ms-animation: slideUpAnimation2 ease .5s;
-      animation: .5s slideUpAnimation2
-  }
-  
+
+
+
+
   #kimono-sunPosition {
       position: absolute;
       left: 0;
@@ -3144,11 +3098,11 @@ bottom: 25px;
       box-shadow: 0 0 10px #fff;
       z-index: 1
   }
-  
+
   .kimono-sunAnimatorActions {
       padding: 0 15px 15px
   }
-  
+
   #kimono-dateSelector {
       font-weight: 700;
       cursor: pointer;
@@ -3167,14 +3121,14 @@ bottom: 25px;
       -ms-animation: scaleIn ease .5s;
       animation: .5s scaleIn
   }
-  
+
   #kimono-dateSelector:active,
   #kimono-dateSelector:focus,
   #kimono-dateSelector:hover {
       border: none;
       outline: 0
   }
-  
+
   .kimono-dateSelectorContainer {
       position: absolute;
       top: 0;
@@ -3196,13 +3150,13 @@ bottom: 25px;
       -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .26);
       box-shadow: 0 1px 3px rgba(0, 0, 0, .26)
   }
-  
+
   #kimono-toggleSunAnimationButton:hover,
   .open #kimono-toggleSunAnimationButton {
       color: #0dabd0;
       background-image: url(https://res.bienici.com/cacheForever/8523c0b0a27457233b14a8d3aa6356ca6815997b/images/sun/sun_hover.png)
   }
-  
+
   @-moz-keyframes slideUpAnimation {
       from {
           -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
@@ -3227,7 +3181,7 @@ bottom: 25px;
           transform: scale(1)
       }
   }
-  
+
   @-webkit-keyframes slideUpAnimation {
       from {
           -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
@@ -3252,7 +3206,7 @@ bottom: 25px;
           transform: scale(1)
       }
   }
-  
+
   @-o-keyframes slideUpAnimation {
       from {
           -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
@@ -3277,7 +3231,7 @@ bottom: 25px;
           transform: scale(1)
       }
   }
-  
+
   @keyframes slideUpAnimation {
       from {
           -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .5);
@@ -3302,7 +3256,7 @@ bottom: 25px;
           transform: scale(1)
       }
   }
-  
+
   @-moz-keyframes slideUpAnimation2 {
       from {
           opacity: 0;
@@ -3323,7 +3277,7 @@ bottom: 25px;
           transform: translateY(0)
       }
   }
-  
+
   @-webkit-keyframes slideUpAnimation2 {
       from {
           opacity: 0;
@@ -3344,7 +3298,7 @@ bottom: 25px;
           transform: translateY(0)
       }
   }
-  
+
   @-o-keyframes slideUpAnimation2 {
       from {
           opacity: 0;
@@ -3365,7 +3319,7 @@ bottom: 25px;
           transform: translateY(0)
       }
   }
-  
+
   @keyframes slideUpAnimation2 {
       from {
           opacity: 0;
@@ -3386,9 +3340,9 @@ bottom: 25px;
           transform: translateY(0)
       }
   }
-  
-  
-  
+
+
+
   .mapboxgl-control-container{
       display: none;
   }
@@ -3408,7 +3362,7 @@ bottom: 25px;
       text-align: center;
       display: inline-block;
   }
-  .maptop .controle-btn.zoomout {
+  .maptop .controle-btn.fullScreen {
   margin: 0px 7px;
   }
   .controle-main {
@@ -3435,12 +3389,12 @@ bottom: 25px;
   width: 100%;
   margin: 7px 0;
   }
-  
+
   .controle-main .map-container {
       position: relative;
       margin: 2px 0;
-  
-  
+
+
       width: 50px;
       height: 50px;
       border-radius: 0px;
@@ -3472,16 +3426,16 @@ bottom: 25px;
   .controle-main .map-warpp-nav .map-container-needle {
 
   }
-  
+
   .controle-main .map-container-needle {
       position: relative;
       width: 40px;
       height: 40px;
-      background: url(https://theastro.co/les-perles/assets/images/logos/compass.svg);
+      background: url(../images/compass.svg);
       background-repeat: no-repeat;
   }
   .map-warpp .map-warpp-nav .rotate-left, .map-warpp .map-warpp-nav .rotate-right {
-      /* background: url(compass_nav_new.png); */
+
       opacity: 1;
       -ms-filter: none;
       filter: none;
@@ -3494,7 +3448,7 @@ bottom: 25px;
       -ms-transform: scale(-1,1);
       transform: scale(-1,1);
   }
-  
+
   .controle-main .rotate-left {
       left: -2px;
   }
@@ -3518,17 +3472,27 @@ bottom: 25px;
       background-size: 100%;
       top: 10px;
   }
+  @media (min-width: 1600px){
+    .banner-blog {
+    height: 600px;
+}
+  }
+  .hasCoverBanner{
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
   @media (max-width: 992px){
       .map-warpp .map-container{
           width: 120px;
           height: 120px;
       }
       .map-warpp .rotate-left, .map-warpp .rotate-right {
-  
+
           width: 70px;
       height: 90px;
       top: 15px;
-      
+
       }
       .map-warpp .rotate-right {
           right: -15px;
@@ -3537,22 +3501,22 @@ bottom: 25px;
           left: -15px;
       }
       .map-warpp .map-center {
-  
+
           left: 50%;
           transform: translateX(-50%);
-      
+
       }
       .map-warpp .map-container-needle {
           position: relative;
       width: 44px;
       height: 43px;
-     
+
       background-repeat: no-repeat;
       background-size: cover;
       }
       .controle-btn {
           font-size: 27px;
-  
+
           padding: 1px 0;
       /*	width: 80px; */
           cursor: pointer;
@@ -3569,23 +3533,177 @@ bottom: 25px;
       }*/
       .controle-main {
           margin-bottom: 90px;
-          
+
       }
   }
   .warpp.range-slider {
-      display: none;
+    width: 75%;
+     margin: 0 auto;
   }
 .contact-form label{
 width:100%;
 margin: 0;
 }
 .w100h100 {
-    width:100%; 
-    height:100%; 
+    width:100%;
+    height:100%;
 }
-.actualites-singlec { margin-bottom: -150px; }                                                 .actualites-singlec .block p>img { width: 100%; margin: 30px auto } 
+.sly-wrapper .w100h100 {
+	position: absolute !important
+}
+                               .actualites-singlec .block p>img { width: 100%; margin: 30px auto;height: auto;}
 .collapse.navbar-collapse.open {
   height: 100%;
   display: block;
   transition: height .4s ease;
+}
+
+.slider {
+    display: none;
+}
+.visiblo {
+    visibility: visible !important;
+}
+.show {
+    position: relative;
+
+}
+.show #kimono-sunAnimatorMenu {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    height: 350px;
+    visibility: hidden;
+}
+
+.kimono-dateSelectorContainer {
+	position: relative;
+	top: 0;
+	width: 100%;
+	left: 0;
+	text-align: center
+}
+.time-control .form-group {
+	margin-bottom: 0px;
+	margin-top: 15px;
+}
+.time-control input[type=date] {
+	border: 0;
+	border-radius: 0;
+	border-bottom : #007168 2px solid;
+}
+.time-control input[type=date]:focus {
+	outline: 0;
+	box-shadow: none;
+}
+.kimono-dateSelectorContainer input:focus{
+	outline: none;
+	box-shadow: none;
+}
+.kimono-ground {
+	position: absolute;
+	bottom: 0;
+	background-image: url('../images/buildings.svg') ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  left: 0;
+  z-index: 1;
+  background-size: contain;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100px;
+  -webkit-animation: .5s slideUpAnimation2;
+  -moz-animation: .5s slideUpAnimation2;
+  -o-animation: .5s slideUpAnimation2;
+  -ms-animation: slideUpAnimation2 ease .5s;
+  animation: .5s slideUpAnimation2;
+}
+#kimono-sunPosition {
+	position: absolute;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/sun.png);
+	background-size: cover;
+	border-radius: 50%;
+	top: 0;
+	margin: -8px;
+	z-index: 1
+}
+#kimono-dateSelector {
+	width: 100%;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 16px;
+	display: inline-block;
+	margin: 10px auto 0;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 0;
+	background: white;
+	border-bottom : #007168 2px solid;
+	color: #000;
+	-webkit-animation: .5s scaleIn;
+	-moz-animation: .5s scaleIn;
+	-o-animation: .5s scaleIn;
+	-ms-animation: scaleIn ease .5s;
+	animation: .5s scaleIn
+}
+#kimono-sunAnimatorMenu #kimono-sunSvg {
+	position: absolute;
+	width: 100%;
+}
+#kimono-sunPositionAnimation {
+	position: relative;
+	width: 85%;
+	margin: auto;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	background-size: 100%;
+	overflow: hidden
+}
+.kimono-sunAnimatorActions {
+	padding: 0 0px 0px;
+}
+.fancybox-button.fancybox-button--thumbs{
+  display: none;
+}
+:focus {
+    outline: 0
+}
+.hasMore {
+  font-family: 'Hartwell';
+      background-color: #A1A1A1;
+      padding: 8px 26px;
+      color: black;
+      display: inline-block !important;
+      text-decoration: none !important;
+      margin-top: 0;
+          margin-bottom: 20px;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      transition: .2s ease-in-out;
+}
+.hasMore-warpp{
+  text-align: center;
+}
+a.hasMore::after {
+    content: "";
+    position: absolute;
+    background-color: #007168;
+    left: 0;
+    bottom: auto;
+    top: 0px;
+    text-decoration: none;
+    width: 100%;
+    height: 5px;
+    transition: .2s ease-in-out;
+    visibility: hidden;
+}
+a.hasMore:hover::after {
+    top: calc(100% - 3px);
+    visibility: visible;
 }
