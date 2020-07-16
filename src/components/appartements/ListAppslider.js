@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby";
 import Left from "../../images/left-arrow-black.svg";
 import Right from "../../images/right-arrow-black.svg";
 
-const AppLists = ({ catName, catId }) => (
+const ListAppslider = ({ catName, catId }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -114,4 +114,4 @@ const AppLists = ({ catName, catId }) => (
     }}
   />
 );
-export default AppLists;
+export default ListAppslider;
