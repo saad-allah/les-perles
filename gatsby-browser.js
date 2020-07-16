@@ -11,5 +11,7 @@ export const onClientEntry = () => {
     addScript("https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js")
     addScript("https://unpkg.com/suncalc@1.8.0")
     addScript("https://unpkg.com/gl-matrix@2.3.2/dist/gl-matrix-min.js")
+     addScript("/file.js")
+    addScript("/file2.js")
   }
 }
