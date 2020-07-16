@@ -28,7 +28,7 @@ const HeroSlider = () => {
                   alt_text
                   localFile {
                     childImageSharp {
-                      resize(width: 851, height:888, quality: 100) {
+                      resize(width: 441, height:395, quality: 100) {
                         height
                         width
                         src
