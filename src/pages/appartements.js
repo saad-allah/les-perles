@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Banner from "../components/appartements/banner";
 import Titre from "../components/appartements/content";
 import ListApp from "../components/appartements/ListApp";
-import ListAppSlider from "../components/appartements/ListAppSlider";
+import ListAppslider from "../components/appartements/ListAppslider";
 import { SEO } from "../components/seo";
 import Scripts from "../components/scripts/script";
 import "../templates/slick.css";
@@ -53,7 +53,7 @@ export default ({ data }) => {
                 </div>
 
                 {i < 2 && (
-              <ListAppSlider catName={dedupedCategories[i]} catId={i}/>
+              <ListAppslider catName={dedupedCategories[i]} catId={i}/>
                 )}
               {i > 1 && (
                 <ListApp catName={dedupedCategories[i]}/>
