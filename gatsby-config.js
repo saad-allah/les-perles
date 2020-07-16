@@ -2,6 +2,7 @@
 module.exports = {
   siteMetadata: {
     title: `Les perles`,
+    siteUrl: `https://lesperles.ma`,
     description: `Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques`,
     author: `@astro`,
   },
@@ -11,10 +12,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -38,111 +47,19 @@ module.exports = {
   }
 },
 {
-    "resolve": "gatsby-plugin-excerpts",
-    "options": {
-        "sources": {
-            "snippetBlocks": {
-                "type": "htmlQuery",
-                "sourceField": "html",
-                "excerptSelector": ".custom-block.snippet .custom-block-body",
-                "stripSelector": "a",
-                "elementReplacements": [
-                    {
-                        "selector": "h6",
-                        "replaceWith": "strong"
-                    },
-                    {
-                        "selector": "h5",
-                        "replaceWith": "h6"
-                    },
-                    {
-                        "selector": "h4",
-                        "replaceWith": "h5"
-                    },
-                    {
-                        "selector": "h3",
-                        "replaceWith": "h4"
-                    },
-                    {
-                        "selector": "h2",
-                        "replaceWith": "h3"
-                    },
-                ],
-            },
-            "default": {
-                "type": "htmlQuery",
-                "sourceField": "html",
-                "excerptSelector": "html > *",
-                "ignoreSelector": "img, .gatsby-highlight",
-                "stripSelector": "a",
-                "elementReplacements": [
-                    {
-                        "selector": "h6",
-                        "replaceWith": "strong"
-                    },
-                    {
-                        "selector": "h5",
-                        "replaceWith": "h6"
-                    },
-                    {
-                        "selector": "h4",
-                        "replaceWith": "h5"
-                    },
-                    {
-                        "selector": "h3",
-                        "replaceWith": "h4"
-                    },
-                    {
-                        "selector": "h2",
-                        "replaceWith": "h3"
-                    },
-                ],
-                "truncate": {
-                    "length": 10,
-                    "byWords": true,
-                    "ellipsis": "…"
-                },
-            }
-        },
-        "sourceSets": {
-            "markdownHtml": [
-                "snippetBlocks",
-                "default"
-            ]
-        },
-        "excerpts": {
-            "snippet": {
-                "type": "html",
-                "nodeTypeSourceSet": {
-                    "MarkdownRemark": "markdownHtml"
-                }
-            }
-        }
-    },
-},
-{
-    "resolve": "gatsby-remark-custom-blocks",
-    "options": {
-        "blocks": {
-            "snippet": {
-                "classes": "snippet"
-            },
-        },
-    },
-}, {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      tableOfContents: {
-        heading: null,
-        maxDepth: 6,
-      },
-    },
-  },
+   resolve: `gatsby-plugin-nprogress`,
+   options: {
+     // Setting a color is optional.
+     color: `#037168`,
+     // Disable the loading spinner.
+     showSpinner: true,
+   },
+ },
     {
       resolve: "gatsby-source-wordpress",
       options: {
         // I have created a dummy site for us to use with the plugins we discussed
-        baseUrl: "les-perles.theastro.co",
+        baseUrl: "admin.lesperles.ma",
         protocol: "https",
         hostingWPCOM: false,
         // We will be using some advanced custom fields
@@ -150,7 +67,7 @@ module.exports = {
         acfOptionPageIds: [],
         verboseOutput: false,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://les-perles.theastro.co",
+          sourceUrl: "https://admin.lesperles.ma",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
@@ -178,4 +95,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
   ],
-} 
+}
