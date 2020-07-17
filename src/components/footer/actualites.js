@@ -47,7 +47,9 @@ const Actualites = () => (
           <div className="footer-slider">
             {data.allWordpressPost.edges.map(({ node }) => (
               <div className="slide" key={node.slug}>
-                <Link to={`/actualites/${node.slug}`} className="linkto" title={node.title}>  </Link>
+                <Link to={`/actualites/${node.slug}`} className="linkto" aria-label={node.title} >
+                <span className="hide-title">{node.title}</span>
+                </Link>
                 <div className="overlay"></div>
                 {node.featured_media && (
                   <Img
