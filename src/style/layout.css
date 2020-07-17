@@ -871,7 +871,9 @@ header img.logo {
 .footer footer {
     flex: 1;
 }
-
+.hide-title{
+  opacity: 0;
+}
 .footer footer .indexed {
     z-index: 11;
 }
