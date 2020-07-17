@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://lesperles.ma">
-    <img alt="Gatsby" src="https://admin.lesperles.ma/wp-content/uploads/2020/06/lesperles-logo.png" width="60" />
+    <img alt="Gatsby" src="https://admin.lesperles.ma/wp-content/uploads/2020/06/lesperles-logo.png" width="200" />
   </a>
 </p>
 <h1 align="center">
