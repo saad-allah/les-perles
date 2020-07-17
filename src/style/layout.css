@@ -847,6 +847,7 @@ header img.logo {
 
 .contact .wrapper .text a {
     color: #005C51;
+    font-weight: bold;
     text-decoration: none;
     margin: 0 auto;
 }
