@@ -1,5 +1,5 @@
 function _xd(){
-
+  if ($("#map")[0]) {
   'use strict';
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibW91cm5lciIsImEiOiJWWnRiWG1VIn0.j6eccFHpE3Q04XPLI7JxbA';
@@ -29,7 +29,7 @@ function _xd(){
   }
   var needle = document.getElementById('needle')
   $(".zoomout").click(function() {
-    
+
    var zom = map.getZoom();
    map.flyTo({
        zoom: zom - 1
@@ -253,6 +253,7 @@ function _xd(){
           moveSun(configTime);
       });
 
+      }
 }
 if (window.performance) {
   if (performance.navigation.type == 1) {
