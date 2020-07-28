@@ -49,7 +49,7 @@ function _xd(){
   var map = new mapboxgl.Map({
       container: 'map',
       style: 'https://data.osmbuildings.org/0.2/rkc8ywdl/style.json',
-      center: [-7.633166,33.6054793],
+    center: [-6.8520016, 33.9715904],
       zoom: 15.42,
       pitch: 60, // pitch in degrees
       bearing: -10, // bearing in degrees
