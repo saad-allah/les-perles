@@ -2759,7 +2759,7 @@ function _dhhx(){
 
     zoom: 15,
 
-    center: [-6.8520016,33.9715904],
+    center: [-6.8520016, 33.9715904],
 
 
 
@@ -2780,7 +2780,7 @@ function _dhhx(){
 
         type: 'Point',
 
-        coordinates: [-8.494532, 33.229384]
+        coordinates: [-6.8520016, 33.9715904]
 
     },
 
