@@ -1533,7 +1533,8 @@ background-size: cover;
 }
 
 .vivre .gryff .text {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 20px;
     z-index: 10;
     position: relative;
@@ -1541,6 +1542,9 @@ background-size: cover;
 
 .vivre .gryff .text p {
     color: white;
+}
+.vivre .gryff .text p:last-child {
+    font-size: 15px;
 }
 
 .vivre .gryff .text span {
@@ -3745,4 +3749,36 @@ a.hasMore::after {
 a.hasMore:hover::after {
     top: calc(100% - 3px);
     visibility: visible;
+}
+#map .marker {
+  width: 30px;
+height: 30px;
+background-image: url(../images/pin.svg);
+background-size: cover;
+}
+@media (min-width:768px){
+
+  .vivre .gryff .text p:last-child {
+      font-size: 19px;
+  }
+  .vivre .gryff .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+}
+}
+@media (min-width:999px){
+
+  .vivre .gryff .text p:last-child {
+      font-size: 15px;
+  }
+  .vivre .gryff .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+}
 }
