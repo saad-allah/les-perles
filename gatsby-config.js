@@ -1,7 +1,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Les perles`,
+    title: `Les Perles de l'Agdal `,
     siteUrl: `https://lesperles.ma`,
     description: `Les Perles de l'Agdal est une résidence fermée et sécurisée qui vous propose des appartements R+6 R+8 dotés d'une architecture et design moderne pensés pour vous offrir des éspaces de vie à la fois reposants et pratiques`,
     author: `@astro`,
@@ -46,6 +46,13 @@ module.exports = {
     }
   }
 },
+{
+   resolve: 'gatsby-plugin-robots-txt',
+   options: {
+     host: 'https://lesperles.ma',
+     policy: [{ userAgent: '*', disallow: ['/'] }]
+   }
+ },
 {
    resolve: `gatsby-plugin-nprogress`,
    options: {
