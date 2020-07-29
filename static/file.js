@@ -46,7 +46,7 @@ function _dhhx(){
   return mapboxgl;
 
   })));
-  
+
 
   if ($(".galeries")[0]) {
     $(document).ready(function () {
@@ -2800,9 +2800,7 @@ function _dhhx(){
     //style: 'mapbox://styles/mapbox/streets-v11',
 
     zoom: 15,
-
-    center: [-6.8520016, 33.9715904],
-
+    center:[-6.849508, 33.971999]
 
 
     });
@@ -2821,8 +2819,7 @@ function _dhhx(){
     geometry: {
 
         type: 'Point',
-
-        coordinates: [-6.8520016, 33.9715904]
+        coordinates:[-6.849508, 33.971999]
 
     },
 

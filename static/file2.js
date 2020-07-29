@@ -49,14 +49,58 @@ function _xd(){
   var map = new mapboxgl.Map({
       container: 'map',
       style: 'https://data.osmbuildings.org/0.2/rkc8ywdl/style.json',
-    center: [-6.8520016, 33.9715904],
+    center: [-6.849508, 33.971999],
       zoom: 15.42,
-      pitch: 60, // pitch in degrees
-      bearing: -10, // bearing in degrees
+      // pitch: 60, // pitch in degrees
+      // bearing: -10, // bearing in degrees
    scrollZoom: false,
       hash: false
   });
 
+      var geojson = {
+
+      type: 'FeatureCollection',
+
+      features: [{
+
+      type: 'Feature',
+
+      geometry: {
+
+          type: 'Point',
+
+          coordinates: [-6.849508, 33.971999]
+
+      },
+
+      properties: {
+
+
+      }
+
+      }]
+
+      };
+
+      // add markers to map
+
+      geojson.features.forEach(function (marker) {
+
+      // create a HTML element for each feature
+
+      var el = document.createElement('div');
+
+      el.className = 'marker';
+
+      // make a marker for each feature and add to the map
+
+      new mapboxgl.Marker(el)
+
+      .setLngLat(marker.geometry.coordinates)
+
+      .addTo(map);
+
+      });
   map.addControl(new mapboxgl.NavigationControl());
   map.addControl(new mapboxgl.GeolocateControl());
 
