@@ -35,7 +35,7 @@ const CategorieApp = ({ data, pageContext: { category } }) => {
               <>
                 <div className="col-md-12">
                   <div className="title small">
-                    <h3>Type : {category}</h3>
+                    <h3>Catégorie : {category}</h3>
                   </div>
                 </div>
 
@@ -56,21 +56,13 @@ const CategorieApp = ({ data, pageContext: { category } }) => {
                     <div className="text">
                       <p>
                         <span>Type : </span>
-                        <i>
-                          {" "}
-                          {node.categories &&
-                            node.categories.map(
-                              (category) => `${category.name} `
-                            )}
-                        </i>{" "}
+                        {node.acf.type_apt}
                       </p>
                       <p>
                         <span>Superficie totale : </span>
                         {node.acf.superficie_totale}
                       </p>
-                      <p>
-                        <span>Section : </span> {node.acf.section}
-                      </p>
+
                       <Link
                         className="buttons"
                         to={`/appartements/${node.slug}`}
@@ -153,7 +145,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            section
+            type_apt
             superficie_totale
             contactez_nous_button
           }

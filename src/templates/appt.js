@@ -129,10 +129,10 @@ const AppPost = ({ data }) => {
                 <div className="slide wrap">
                   <div className="childsliderfirst childslider">
                     {wordpressWpAppartement.acf.appartement_image_galerie.map(
-                      (item) => (
+                      (item,i) => (
                         <div
                           className="slide"
-                          key={item.appartement.localFile.id}
+                          key={i}
                         >
                           <img src={item.appartement.source_url} alt="" />
                         </div>
@@ -145,30 +145,6 @@ const AppPost = ({ data }) => {
                         <img src={Left} alt="" />
                       </li>
                       <li className="next6">
-                        <img src={Right} alt="" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="slide wrap">
-                  <div className="childslidersec childslider">
-                    {wordpressWpAppartement.acf.visite_virtuelle_image_galerie.map(
-                      (item) => (
-                        <div
-                          className="slide"
-                          key={item.visite_virtuelle.localFile.id}
-                        >
-                          <img src={item.visite_virtuelle.source_url} alt="" />
-                        </div>
-                      )
-                    )}
-                  </div>
-                  <div className="arrows">
-                    <ul>
-                      <li className="prev7">
-                        <img src={Left} alt="" />
-                      </li>
-                      <li className="next7">
                         <img src={Right} alt="" />
                       </li>
                     </ul>
@@ -195,6 +171,31 @@ const AppPost = ({ data }) => {
                     </ul>
                   </div>
                 </div>
+                <div className="slide wrap">
+                  <div className="childslidersec childslider">
+                    {wordpressWpAppartement.acf.visite_virtuelle_image_galerie.map(
+                      (item) => (
+                        <div
+                          className="slide"
+                          key={1}
+                        >
+                          <img src={item.visite_virtuelle.source_url} alt="" />
+                        </div>
+                      )
+                    )}
+                  </div>
+                  <div className="arrows">
+                    <ul>
+                      <li className="prev7">
+                        <img src={Left} alt="" />
+                      </li>
+                      <li className="next7">
+                        <img src={Right} alt="" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -214,18 +215,10 @@ const AppPost = ({ data }) => {
               </div>
               <div className="text">
                 <div className="bold">
-                  <p>Superficie totale :</p>
+                  <p>Superficie habitable  :</p>
                 </div>
                 <div className="thin margined">
                   <p>{wordpressWpAppartement.acf.superficie_totale}</p>
-                </div>
-              </div>
-              <div className="text">
-                <div className="bold">
-                  <p>Superficie habitale :</p>
-                </div>
-                <div className="thin margined">
-                  <p>{wordpressWpAppartement.acf.superficie_habitale}</p>
                 </div>
               </div>
             </div>
@@ -240,14 +233,7 @@ const AppPost = ({ data }) => {
                   </p>
                 </div>
               </div>
-              <div className="text">
-                <div className="bold">
-                  <p>Localisation :</p>
-                </div>
-                <div className="thin">
-                  <p>{wordpressWpAppartement.acf.localisation}</p>
-                </div>
-              </div>
+
             </div>
             <div className="col-md-4">
               <div className="wrapper start">
@@ -261,12 +247,7 @@ const AppPost = ({ data }) => {
                 <p>{wordpressWpAppartement.acf.immeuble}</p>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="wrapper end">
-                <img src={Aha} alt="" />
-                <p>{wordpressWpAppartement.acf.section}</p>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -364,12 +345,11 @@ export const pageQuery = graphql`
           }
         }
         superficie_totale
-        superficie_habitale
+
         superficie_balcon___buanderie
-        localisation
         chambres
         immeuble
-        section
+        type_apt
         telecharger
         contactez_nous_button
         contactez_nous_link
