@@ -1996,7 +1996,7 @@ background-size: cover;
 }
 
 .childsliderthird img {
-    width: 50%;
+    width: 45%;
     margin:auto;
     height: auto;
 }
@@ -3796,4 +3796,8 @@ background-size: cover;
 }
 .hide-img{
   opacity: 0 !important
+}
+.childsliderfirst ,.childsliderthird{
+display: flex !important;
+align-items: center;
 }
