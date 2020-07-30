@@ -48,7 +48,7 @@ export default ({ data }) => {
               <div key={i} className="row">
                 <div className="col-md-12">
                   <div className="title small">
-                    <h3>Catégories : {dedupedCategories[i]}</h3>
+                    <h3>Catégorie : {dedupedCategories[i]}</h3>
                   </div>
                 </div>
 
