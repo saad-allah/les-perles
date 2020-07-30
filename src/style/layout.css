@@ -1853,7 +1853,7 @@ background-size: cover;
 
 .appartements .wrapped-here {
     position: relative;
-    margin: 40px auto;
+    margin: 40px 0;
 }
 
 .appartements .wrapped-here .arrows ul {
@@ -3781,4 +3781,19 @@ background-size: cover;
     z-index: 10;
     position: relative;
 }
+}
+.imgCoverApp {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.appartements .img{
+  position: relative;
+}
+.appartements .img img{
+  object-fit :contain !important
+}
+.hide-img{
+  opacity: 0 !important
 }
