@@ -28,8 +28,8 @@ const ListAppslider = ({ catName, catId }) => (
                     }
                   }
                 }
-                section
                 superficie_totale
+                type_apt
                 contactez_nous_button
               }
               slug
@@ -48,34 +48,29 @@ const ListAppslider = ({ catName, catId }) => (
           <div className={`col-md-10 wrapped-here arrow-app${catId + 1}`}>
             <div className={`slider-app${catId + 1}`}>
               {appList.map(({ node }, i) => (
-                <>
+                   <React.Fragment key={i}>
                   {i < 6 && (
                     <div className="slide" key={i}>
                       <div className="img">
-                        <img
-                          src={
-                            node.acf.featured_image.localFile.childImageSharp
-                              .resize.src
-                          }
-                          alt={node.acf.featured_image.alt_text}
-                        />
+                      <img
+                        src={
+                          node.acf.featured_image.localFile.childImageSharp.resize
+                            .src
+                        }
+                        alt={node.acf.featured_image.alt_text}
+                      />
+
                       </div>
                       <div className="text">
                         <p>
                           <span>Type : </span>
                           <i>
-                            {node.categories &&
-                              node.categories.map(
-                                (category) => `${category.name} `
-                              )}
+                        {node.acf.type_apt}
                           </i>
                         </p>
                         <p>
-                          <span>Superficie totale : </span>
+                          <span>Superficie habitable : </span>
                           {node.acf.superficie_totale}
-                        </p>
-                        <p>
-                          <span>Section : </span> {node.acf.section}
                         </p>
                         <Link
                           className="buttons"
@@ -86,7 +81,7 @@ const ListAppslider = ({ catName, catId }) => (
                       </div>
                     </div>
                   )}
-                </>
+                 </React.Fragment>
               ))}
             </div>
             <div className="arrows">
@@ -95,7 +90,7 @@ const ListAppslider = ({ catName, catId }) => (
                   <img src={Left} alt="/" />
                 </li>
                 <li className="next4">
-                  <img src={Right} alt="" />
+                  <img src={Right} alt="/" />
                 </li>
               </ul>
             </div>

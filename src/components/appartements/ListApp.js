@@ -26,9 +26,9 @@ const AppLists = ({ catName }) => (
                     }
                   }
                 }
-                section
                 superficie_totale
                 contactez_nous_button
+                type_apt
               }
               slug
               title
@@ -63,19 +63,14 @@ const AppLists = ({ catName }) => (
                     <p>
                       <span>Type : </span>
                       <i>
-                        {node.categories &&
-                          node.categories.map(
-                            (category) => `${category.name} `
-                          )}
+                    {node.acf.type_apt}
                       </i>
                     </p>
                     <p>
                       <span>Superficie totale : </span>
                       {node.acf.superficie_totale}
                     </p>
-                    <p>
-                      <span>Section : </span> {node.acf.section}
-                    </p>
+
                     <Link className="buttons" to={`/appartements/${node.slug}`}>
                       En savoir plus
                     </Link>
