@@ -3,11 +3,8 @@ import { SEO } from "../components/seo";
 import Scripts from "../components/scripts/script";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import "./slick.css";
-import Aha from "../images/ah.svg";
-import Bed from "../images/bed.svg";
-import House from "../images/house.svg";
 import Download from "../images/download.svg";
 import Left from "../images/left-arrow.svg";
 import Right from "../images/right-arrow.svg";
@@ -210,7 +207,7 @@ const AppPost = ({ data }) => {
                   <p>Type :</p>
                 </div>
                 <div className="thin margined">
-                  <p>{wordpressWpAppartement.acf.superficie_totale}</p>
+                  <p>{wordpressWpAppartement.acf.type_apt}</p>
                 </div>
               </div>
               <div className="text">
@@ -223,30 +220,30 @@ const AppPost = ({ data }) => {
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-12">
-              <div className="text">
-                <div className="bold">
-                  <p>Superficie balcon &amp; buanderie :</p>
-                </div>
-                <div className="thin">
-                  <p>
-                    {wordpressWpAppartement.acf.superficie_balcon___buanderie}
-                  </p>
-                </div>
+            <div className="text">
+              <div className="bold">
+                <p>Balcon et buaderie :</p>
               </div>
+              <div className="thin">
+                <p>
+                  {wordpressWpAppartement.acf.superficie_balcon___buanderie}
+                </p>
+              </div>
+            </div>
+            <div className="text">
+              <div className="bold">
+                <p>Nombre de chambres :</p>
+              </div>
+              <div className="thin">
+                <p>
+                  {wordpressWpAppartement.acf.chambres}
+                </p>
+              </div>
+            </div>
 
             </div>
-            <div className="col-md-4">
-              <div className="wrapper start">
-                <img src={Bed} alt="" />
-                <p>{wordpressWpAppartement.acf.chambres}</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="wrapper center">
-                <img src={House} alt="" />
-                <p>{wordpressWpAppartement.acf.immeuble}</p>
-              </div>
-            </div>
+
+
 
           </div>
         </div>
@@ -256,15 +253,15 @@ const AppPost = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <a className="buttons" href="#">
+              <a className="buttons"  href={wordpressWpAppartement.acf.pdf.source_url} download >
                 <img src={Download} alt="" />
                 {wordpressWpAppartement.acf.telecharger}
               </a>
             </div>
             <div className="col-md-12">
-              <Link className="buttons" to="/contact">
+              <a className="buttons" href={`/${wordpressWpAppartement.acf.contactez_nous_link}`} target="_blank">
                 {wordpressWpAppartement.acf.contactez_nous_button}
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -348,7 +345,7 @@ export const pageQuery = graphql`
 
         superficie_balcon___buanderie
         chambres
-        immeuble
+
         type_apt
         telecharger
         contactez_nous_button
