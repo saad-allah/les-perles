@@ -18,7 +18,7 @@ const ListApp4 = () => (
                   source_url
                   alt_text
                 }
-                section
+
                 superficie_totale
                 contactez_nous_button
               }
@@ -50,7 +50,7 @@ const ListApp4 = () => (
                <div className="text">
                    <p><span>Type : </span> F4 </p>
                    <p><span>Superficie totale : </span>{node.acf.superficie_totale}</p>
-                   <p><span>Section : </span> {node.acf.section}</p>
+                  
                    <Link className="buttons" to={`/appartements/${node.slug}`}>En savoir plus</Link>
                </div>
            </div>
