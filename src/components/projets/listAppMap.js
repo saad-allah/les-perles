@@ -31,7 +31,7 @@ const ListAppMap = () => (
                     }
                   }
                 }
-                section
+                type_apt
                 superficie_totale
                 contactez_nous_button
               }
@@ -59,16 +59,13 @@ const ListAppMap = () => (
                         </div>
                         <div className="text">
                           <p>
-                            <span>Type : </span> <i> {node.categories &&
-                              node.categories.map(category => `${category.name} `)}</i>
+                            <span>Type : </span>   {node.acf.type_apt}
                           </p>
                           <p>
-                            <span>Superficie totale : </span>
+                            <span>Superficie habitable : </span>
                             {node.acf.superficie_totale}
                           </p>
-                          <p>
-                            <span>Section : </span> {node.acf.section}
-                          </p>
+
                         </div>
                       </div>
                     </div>
