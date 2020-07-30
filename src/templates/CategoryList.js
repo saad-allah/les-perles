@@ -130,7 +130,7 @@ export const pageQuery = graphql`
       }
     }
     allWordpressWpAppartement(
-    sort: {fields: acf___type_apt, order: ASC},  filter: { categories: { elemMatch: { name: { in: [$id] } } } }
+    sort: {fields: title, order: ASC},  filter: { categories: { elemMatch: { name: { in: [$id] } } } }
     ) {
       edges {
         node {
