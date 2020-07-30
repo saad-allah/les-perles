@@ -1,11 +1,12 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
-
+import Img from "gatsby-image";
+import Placeholder from "../../images/placeholder.jpg";
 const AppLists = ({ catName }) => (
   <StaticQuery
     query={graphql`
       query {
-        allWordpressWpAppartement {
+        allWordpressWpAppartement(sort: {fields: acf___type_apt, order: ASC}) {
           edges {
             node {
               id
@@ -18,10 +19,8 @@ const AppLists = ({ catName }) => (
                   alt_text
                   localFile {
                     childImageSharp {
-                      resize(width: 1214, height: 1214, quality: 100) {
-                        height
-                        width
-                        src
+                      sizes(maxWidth: 2000) {
+                        ...GatsbyImageSharpSizes
                       }
                     }
                   }
@@ -47,17 +46,23 @@ const AppLists = ({ catName }) => (
             <>
               {i < 6 && (
                 <div
-                  className="col-lg-4 col-md-6 col-12 solo wrapped-here"
+                  className={appList.length > 1 ? `col-lg-4 col-md-6 col-12  wrapped-here ` : `col-lg-4 col-md-6 col-12  wrapped-here solo `}
                   key={i}
                 >
                   <div className="img">
-                    <img
-                      src={
-                        node.acf.featured_image.localFile.childImageSharp.resize
-                          .src
-                      }
-                      alt={node.acf.featured_image.alt_text}
-                    />
+
+                        <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                  <Img
+                    className="imgCoverApp"
+                    src={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes.src
+                    }
+                    sizes={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes
+                    }
+                  />
                   </div>
                   <div className="text">
                     <p>

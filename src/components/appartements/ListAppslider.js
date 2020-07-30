@@ -2,12 +2,13 @@ import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Left from "../../images/left-arrow-black.svg";
 import Right from "../../images/right-arrow-black.svg";
-
+import Placeholder from "../../images/placeholder.jpg";
+import Img from "gatsby-image";
 const ListAppslider = ({ catName, catId }) => (
   <StaticQuery
     query={graphql`
       query {
-        allWordpressWpAppartement {
+        allWordpressWpAppartement(sort: {fields: acf___type_apt, order: ASC}) {
           edges {
             node {
               id
@@ -20,10 +21,8 @@ const ListAppslider = ({ catName, catId }) => (
                   alt_text
                   localFile {
                     childImageSharp {
-                      resize(width: 1214, height: 1214, quality: 100) {
-                        height
-                        width
-                        src
+                      sizes(maxWidth: 2000) {
+                        ...GatsbyImageSharpSizes
                       }
                     }
                   }
@@ -52,14 +51,18 @@ const ListAppslider = ({ catName, catId }) => (
                   {i < 6 && (
                     <div className="slide" key={i}>
                       <div className="img">
-                      <img
+                      <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                      <Img
+                        className="imgCoverApp"
                         src={
-                          node.acf.featured_image.localFile.childImageSharp.resize
-                            .src
+                          node.acf.featured_image.localFile.childImageSharp
+                            .sizes.src
                         }
-                        alt={node.acf.featured_image.alt_text}
+                        sizes={
+                          node.acf.featured_image.localFile.childImageSharp
+                            .sizes
+                        }
                       />
-
                       </div>
                       <div className="text">
                         <p>
