@@ -5,6 +5,8 @@ import { graphql, Link } from "gatsby";
 import Banner from "../components/appartements/banner";
 import Titre from "../components/appartements/content";
 import Scripts from "../components/scripts/script";
+import Placeholder from "../images/placeholder.jpg";
+import Img from "gatsby-image";
 import "../templates/slick.css";
 
 const CategorieApp = ({ data, pageContext: { category } }) => {
@@ -45,13 +47,18 @@ const CategorieApp = ({ data, pageContext: { category } }) => {
                     key={i}
                   >
                     <div className="img">
-                      <img
-                        src={
-                          node.acf.featured_image.localFile.childImageSharp
-                            .resize.src
-                        }
-                        alt={node.acf.featured_image.alt_text}
-                      />
+                    <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+              <Img
+                className="imgCoverApp"
+                src={
+                  node.acf.featured_image.localFile.childImageSharp
+                    .sizes.src
+                }
+                sizes={
+                  node.acf.featured_image.localFile.childImageSharp
+                    .sizes
+                }
+              />
                     </div>
                     <div className="text">
                       <p>
@@ -123,7 +130,7 @@ export const pageQuery = graphql`
       }
     }
     allWordpressWpAppartement(
-      filter: { categories: { elemMatch: { name: { in: [$id] } } } }
+    sort: {fields: acf___type_apt, order: ASC},  filter: { categories: { elemMatch: { name: { in: [$id] } } } }
     ) {
       edges {
         node {
@@ -137,10 +144,8 @@ export const pageQuery = graphql`
               alt_text
               localFile {
                 childImageSharp {
-                  resize(width: 1214, height: 1214, quality: 100) {
-                    height
-                    width
-                    src
+                  sizes(maxWidth: 2000) {
+                    ...GatsbyImageSharpSizes
                   }
                 }
               }
