@@ -31,13 +31,11 @@ const HeroSlider = () => {
                              sizes(maxWidth: 2000) {
                         ...GatsbyImageSharpSizes
                       }
-      childImageSharp {
-                      resize(width: 441, height:395, quality: 100) {
+        resize(width: 441, height:395, quality: 100) {
                         height
                         width
                         src
                       }
-                    }
                   }
                 }
               }
