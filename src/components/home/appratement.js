@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
 import React from 'react';
-
+import Img from "gatsby-image";
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
@@ -33,6 +33,9 @@ const HeroSlider = () => {
                         width
                         src
                       }
+                      sizes(maxWidth: 2000) {
+        ...GatsbyImageSharpSizes
+               }
                     }
                   }
                 }
@@ -60,7 +63,19 @@ const HeroSlider = () => {
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
                   <div className="wrapper">
-                    <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
+                  <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                  <Img
+                    className="imgCoverApp"
+                    src={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes.src
+                    }
+                    sizes={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes
+                    }
+                    alt={node.acf.featured_image.alt_text}
+                  />
                      <div className="zoom">
                   <a href={node.acf.featured_image.localFile.childImageSharp.resize.src}  data-fancybox >
 
