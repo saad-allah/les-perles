@@ -7,7 +7,6 @@ import Zom from "../../images/search.svg";
 import Right from "../../images/right.svg";
 import Placeholder from "../../images/placeholder.jpg";
 const HeroSlider = () => {
-
   const data = useStaticQuery(graphql`
     query GetHomeAppSlider {
       wordpressAcfPages(wordpress_id: { eq: 2 }) {
@@ -28,14 +27,15 @@ const HeroSlider = () => {
                   alt_text
                   localFile {
                     childImageSharp {
-                             sizes(maxWidth: 2000) {
-                        ...GatsbyImageSharpSizes
-                      }
-        resize(width: 441, height:395, quality: 100) {
+                      resize(width: 441, height:395, quality: 100) {
                         height
                         width
                         src
                       }
+                      sizes(maxWidth: 2000) {
+               ...GatsbyImageSharpSizes
+                      }
+                    }
                   }
                 }
               }
@@ -45,6 +45,9 @@ const HeroSlider = () => {
 
     }
   `);
+                 
+           
+     
 
     return (
 
