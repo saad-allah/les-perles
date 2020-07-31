@@ -31,6 +31,12 @@ const HeroSlider = () => {
                              sizes(maxWidth: 2000) {
                         ...GatsbyImageSharpSizes
                       }
+      childImageSharp {
+                      resize(width: 441, height:395, quality: 100) {
+                        height
+                        width
+                        src
+                      }
                     }
                   }
                 }
@@ -87,18 +93,7 @@ const HeroSlider = () => {
               <div className="small-slider" >
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
-                      <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
-                  <Img
-                    className="imgCoverApp"
-                    src={
-                      node.acf.featured_image.localFile.childImageSharp
-                        .sizes.src
-                    }
-                    sizes={
-                      node.acf.featured_image.localFile.childImageSharp
-                        .sizes
-                    }
-                  />
+                      <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
                 </div>
           ))}
               </div>
