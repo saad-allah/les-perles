@@ -24,6 +24,7 @@ const HeroSlider = () => {
             node {
               id
               acf {
+                type_apt
                 featured_image {
                   source_url
                   alt_text
@@ -64,7 +65,7 @@ const HeroSlider = () => {
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
                   <div className="wrapper">
-                  <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                  <img src={Placeholder} className="hide-img" alt={node.acf.type_apt}/>
                   <Img
                     className="imgCoverApp"
                     src={
@@ -75,10 +76,13 @@ const HeroSlider = () => {
                       node.acf.featured_image.localFile.childImageSharp
                         .sizes
                     }
-                    alt={node.acf.featured_image.alt_text}
+
                   />
                      <div className="zoom">
-                  <a href={node.acf.featured_image.localFile.childImageSharp.resize.src}  data-fancybox >
+                  <a href={
+                    node.acf.featured_image.localFile.childImageSharp
+                      .sizes.src
+                  }  data-fancybox >
 
                    <img src={Zom} alt="/" /></a>
                   </div>
