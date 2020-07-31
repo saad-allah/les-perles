@@ -1,6 +1,7 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
 import React from 'react';
 import Img from "gatsby-image";
+import Placeholder from "../../images/up.svg";
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
