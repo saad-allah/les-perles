@@ -76,6 +76,7 @@ const HeroSlider = () => {
                       node.acf.featured_image.localFile.childImageSharp
                         .sizes
                     }
+                    alt={node.acf.type_apt}
                   />
                      <div className="zoom">
                   <a href={
