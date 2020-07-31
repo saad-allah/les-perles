@@ -1,12 +1,13 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
 import React from 'react';
-import Img from "gatsby-image";
+
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
 import Right from "../../images/right.svg";
-import Placeholder from "../../images/placeholder.jpg";
+
 const HeroSlider = () => {
+
   const data = useStaticQuery(graphql`
     query GetHomeAppSlider {
       wordpressAcfPages(wordpress_id: { eq: 2 }) {
@@ -32,9 +33,6 @@ const HeroSlider = () => {
                         width
                         src
                       }
-                      sizes(maxWidth: 2000) {
-               ...GatsbyImageSharpSizes
-                      }
                     }
                   }
                 }
@@ -45,9 +43,6 @@ const HeroSlider = () => {
 
     }
   `);
-                 
-           
-     
 
     return (
 
@@ -65,24 +60,9 @@ const HeroSlider = () => {
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
                   <div className="wrapper">
-        <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
-                  <Img
-                    className="imgCoverApp"
-                    src={
-                      node.acf.featured_image.localFile.childImageSharp
-                        .sizes.src
-                    }
-                    sizes={
-                      node.acf.featured_image.localFile.childImageSharp
-                        .sizes
-                    }
-                    alt={node.acf.type_apt}
-                  />
+                    <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
                      <div className="zoom">
-                  <a href={
-                      node.acf.featured_image.localFile.childImageSharp
-                        .sizes.src
-                    }  data-fancybox >
+                  <a href={node.acf.featured_image.localFile.childImageSharp.resize.src}  data-fancybox >
 
                    <img src={Zom} alt="/" /></a>
                   </div>
@@ -95,7 +75,7 @@ const HeroSlider = () => {
               <div className="small-slider" >
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
-                      <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
+                  <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
                 </div>
           ))}
               </div>
