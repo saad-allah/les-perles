@@ -681,9 +681,21 @@ header img.logo {
 }
 
 .small-slider img {
-    width: 90px;
-    border: 2px solid #A1A1A1;
-    margin: 0 auto;
+    width: 100%;
+
+
+}
+.small-slider .imgCoverApp img {
+    object-fit: contain !important;
+
+
+}
+.main-sliderSingle{
+  position: relative;
+  width: 90px;
+  background: white;
+  border: 2px solid #A1A1A1;
+  margin: 0 auto;
 }
 
 .small {
@@ -2374,7 +2386,7 @@ bottom: 25px;
         width: 45px;
         right: -20px;
     }
-    .small-slider img {
+    .small-slider img,.main-sliderSingle {
         margin: 0;
     }
 }
@@ -3801,7 +3813,7 @@ background-size: cover;
 .hide-img{
   opacity: 0 !important
 }
-.childsliderfirst ,.childsliderthird{
+.childsliderfirst .slick-track ,.childsliderthird {
 display: flex !important;
 align-items: center;
 }
