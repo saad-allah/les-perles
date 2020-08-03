@@ -3788,6 +3788,10 @@ background-size: cover;
   width: 100%;
   top: 0;
 }
+.big-slider .imgCoverApp  img {
+    display: block;
+    object-fit: contain !important;
+}
 .appartements .img{
   position: relative;
 }
