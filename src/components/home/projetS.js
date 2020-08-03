@@ -12,6 +12,7 @@ const ProjetS = () => (
             home_vp_title
             home_vp_text
             home_vp_button
+            home_vp_link
             home_vp_image {
               alt_text
               source_url
