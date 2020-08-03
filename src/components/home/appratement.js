@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
 import React from 'react';
 import Img from "gatsby-image";
-import Placeholder from "../../images/up.svg";
+import Placeholder from "../../images/placeholder.jpg";
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
@@ -19,7 +19,7 @@ const HeroSlider = () => {
           home_appartements_link
         }
       }
-      allWordpressWpAppartement( limit: 5) {
+      allWordpressWpAppartement( limit: 100) {
           edges {
             node {
               id
@@ -95,7 +95,21 @@ const HeroSlider = () => {
               <div className="small-slider" >
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
-                  <img src={node.acf.featured_image.localFile.childImageSharp.resize.src} alt={node.acf.featured_image.alt_text}/>
+                  <div className="main-sliderSingle">
+                  <img src={Placeholder} className="hide-img" alt={node.acf.type_apt}/>
+                  <Img
+                    className="imgCoverApp"
+                    src={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes.src
+                    }
+                    sizes={
+                      node.acf.featured_image.localFile.childImageSharp
+                        .sizes
+                    }
+
+                  />
+                  </div>
                 </div>
           ))}
               </div>
