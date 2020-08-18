@@ -5,7 +5,6 @@ import { graphql, Link } from "gatsby";
 import Banner from "../components/appartements/banner";
 import Titre from "../components/appartements/content";
 import Scripts from "../components/scripts/script";
-import Placeholder from "../images/placeholder.jpg";
 import Img from "gatsby-image";
 import "../templates/slick.css";
 
@@ -47,7 +46,7 @@ const CategorieApp = ({ data, pageContext: { category } }) => {
                     key={i}
                   >
                     <div className="img">
-                    <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                    <img src="/placeholder.jpg" className="hide-img" alt={node.acf.type_apt}/>
               <Img
                 className="imgCoverApp"
                 src={
