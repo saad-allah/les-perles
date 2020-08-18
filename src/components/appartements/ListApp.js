@@ -1,7 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import Placeholder from "../../images/placeholder.jpg";
 const AppLists = ({ catName }) => (
   <StaticQuery
     query={graphql`
@@ -51,7 +50,7 @@ const AppLists = ({ catName }) => (
                 >
                   <div className="img">
 
-                        <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                        <img src="/placeholder.jpg" className="hide-img" alt={node.acf.type_apt}/>
                   <Img
                     className="imgCoverApp"
                     src={
