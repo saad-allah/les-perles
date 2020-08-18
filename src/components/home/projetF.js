@@ -20,6 +20,7 @@ const ProjetF = () => (
                   id
                   size
                   publicURL
+                  url
                 }
               }
             }
@@ -61,7 +62,7 @@ const ProjetF = () => (
                   className="shape-r"
                   src={
                     data.wordpressAcfPages.acf.home_p_concept_svg_figure.url
-                      .localFile.publicURL
+                      .localFile.url
                   }
                   alt={data.wordpressAcfPages.acf.home_p_concept_svg_figure.alt}
                 />
