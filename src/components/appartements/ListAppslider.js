@@ -2,7 +2,6 @@ import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import Left from "../../images/left-arrow-black.svg";
 import Right from "../../images/right-arrow-black.svg";
-import Placeholder from "../../images/placeholder.jpg";
 import Img from "gatsby-image";
 const ListAppslider = ({ catName, catId }) => (
   <StaticQuery
@@ -51,7 +50,7 @@ const ListAppslider = ({ catName, catId }) => (
                   {i < 6 && (
                     <div className="slide" key={i}>
                       <div className="img">
-                      <img src={Placeholder} className="hide-img" alt=  {node.acf.type_apt}/>
+                      <img src="/placeholder.jpg" className="hide-img" alt={node.acf.type_apt}/>
                       <Img
                         className="imgCoverApp"
                         src={
