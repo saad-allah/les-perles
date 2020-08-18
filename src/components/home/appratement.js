@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql, Link } from "gatsby";
 import React from 'react';
 import Img from "gatsby-image";
-import Placeholder from "../../images/placeholder.jpg";
+
 import Up from "../../images/up.svg";
 import Down from "../../images/down.svg";
 import Zom from "../../images/search.svg";
@@ -65,7 +65,7 @@ const HeroSlider = () => {
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
                   <div className="wrapper">
-                  <img src={Placeholder} className="hide-img" alt={node.acf.type_apt}/>
+                <img src="/placeholder.jpg" className="hide-img" alt={node.acf.type_apt}/>
                   <Img
                     className="imgCoverApp"
                     src={
@@ -96,7 +96,7 @@ const HeroSlider = () => {
                   {data.allWordpressWpAppartement.edges.map(({ node }, i) => (
                 <div className="slide" key={i}>
                   <div className="main-sliderSingle">
-                  <img src={Placeholder} className="hide-img" alt={node.acf.type_apt}/>
+                  <img src="/placeholder.jpg" className="hide-img" alt={node.acf.type_apt}/>
                   <Img
                     className="imgCoverApp"
                     src={
