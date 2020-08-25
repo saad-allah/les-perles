@@ -2007,6 +2007,7 @@ function _dhhx(){
   if ($(".slider-concepts")[0]) {
     $(document).ready(function () {
             setTimeout(function() {
+              
       $('.slider-concepts').slick({
 
 
