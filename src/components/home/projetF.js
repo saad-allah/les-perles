@@ -77,7 +77,7 @@ const ProjetF = () => (
                 <div className="text">
                   <p>{data.wordpressAcfPages.acf.home_p_concept_text}</p>
                   <a
-                    className="button" target="_blank"
+                    className="button" target="_blank" rel="noreferrer" 
                     href={data.wordpressAcfPages.acf.home_p_concept_link}
                   >
                     {data.wordpressAcfPages.acf.home_p_concept_button}

@@ -73,7 +73,8 @@ const Visite = () => {
               </div>
             </div>
             <div className="col-md-4">
-            <a href={data.wordpressAcfPages.acf.line_3d} target="_blank">
+            <a href={data.wordpressAcfPages.acf.line_3d} target="_blank" rel="noreferrer" >
+              <span>{data.wordpressAcfPages.acf.titre_v}</span>
             <Img
               src={
                 data.wordpressAcfPages.acf.image_3d.localFile
@@ -87,7 +88,8 @@ const Visite = () => {
             </a>
             </div>
             <div className="col-md-4">
-            <a href={data.wordpressAcfPages.acf.line_360} target="_blank">
+            <a href={data.wordpressAcfPages.acf.line_360} target="_blank" rel="noreferrer" >
+            <span>{data.wordpressAcfPages.acf.titre_v}</span>
             <Img
               src={
                 data.wordpressAcfPages.acf.image_361.localFile
@@ -101,7 +103,8 @@ const Visite = () => {
             </a>
             </div>
             <div className="col-md-4">
-            <a href={data.wordpressAcfPages.acf.line_cyclotamaris} target="_blank">
+            <a href={data.wordpressAcfPages.acf.line_cyclotamaris} target="_blank" rel="noreferrer" >
+              <span>{data.wordpressAcfPages.acf.titre_v}</span>
             <Img
               src={
                 data.wordpressAcfPages.acf.image_cyclotamaris.localFile
