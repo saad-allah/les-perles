@@ -3986,3 +3986,12 @@ align-items: center
     height: 400px;
 }
  }
+ .visite-warrp span{
+   position: absolute;
+   opacity: 0;
+   z-index: -1;
+   pointer-events: none
+ }
+ a{
+   cursor:pointer;
+ }
