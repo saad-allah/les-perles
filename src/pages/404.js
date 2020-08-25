@@ -3,6 +3,7 @@ import {Link } from "gatsby";
 import Layout from "../components/layout"
 import { SEO } from "../components/seo";
 import "../style/404.css";
+import Scripts from "../components/scripts/script";
 import _404 from "../images/404.png";
 const NotFoundPage = () => (
   <Layout>
@@ -22,6 +23,7 @@ const NotFoundPage = () => (
             <Link className="button" to="/"><span> Revenir à l'accueil </span></Link>
 
           </div>
+                <Scripts />
   </Layout>
 )
 

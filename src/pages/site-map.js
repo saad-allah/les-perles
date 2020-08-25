@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Banner from "../components/sitemap/banner";
 import Paragraph from "../components/sitemap/content";
+import Scripts from "../components/scripts/script";
 import {SEO} from "../components/seo";
 
 export default ({ data }) => {
@@ -18,6 +19,7 @@ export default ({ data }) => {
               imageFb={data.wordpressPage.yoast.opengraph_image.localFile.childImageSharp.resize.src}
               imageTwitter={data.wordpressPage.yoast.twitter_image.localFile.childImageSharp.resize.src}
               />
+                    <Scripts />
         <Banner />
   <Paragraph />
     </Layout>
