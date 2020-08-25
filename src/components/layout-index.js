@@ -22,6 +22,24 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      <div
+      key={`loader`}
+      id="___loader"
+      style={{
+        alignItems: "center",
+        backgroundColor: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        position: "fixed",
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 5555,
+      }}
+   >
+  <img src="/lesperles-logo.png" className="logo"/>
+   </div>
         <Header siteTitle={data.site.siteMetadata.title} />
 
           <main>{children}</main>
