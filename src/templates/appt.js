@@ -169,28 +169,14 @@ const AppPost = ({ data }) => {
                   </div>
                 </div>
                 <div className="slide wrap">
-                  <div className="childslidersec childslider">
-                    {wordpressWpAppartement.acf.visite_virtuelle_image_galerie.map(
-                      (item) => (
-                        <div
-                          className="slide"
-                          key={1}
-                        >
-                          <img src={item.visite_virtuelle.source_url} alt="" />
-                        </div>
-                      )
-                    )}
+                  <div className="childslidersec childslider _vis">
+                  <div
+           dangerouslySetInnerHTML={{
+             __html: wordpressWpAppartement.acf.code_iframe
+           }}
+         />
                   </div>
-                  <div className="arrows">
-                    <ul>
-                      <li className="prev7">
-                        <img src={Left} alt="" />
-                      </li>
-                      <li className="next7">
-                        <img src={Right} alt="" />
-                      </li>
-                    </ul>
-                  </div>
+
                 </div>
 
               </div>
@@ -325,22 +311,7 @@ export const pageQuery = graphql`
           }
         }
 
-        visite_virtuelle_image_galerie {
-          visite_virtuelle {
-            source_url
-            alt_text
-            localFile {
-              id
-              size
-              childImageSharp {
-                id
-                sizes(maxWidth: 2000) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
-        }
+        code_iframe
         superficie_totale
 
         superficie_balcon___buanderie
