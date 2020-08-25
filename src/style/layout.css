@@ -421,6 +421,19 @@ a.button:hover::after {
 header {
     width: 100%;
 }
+main{
+  padding-top: 70px;
+}
+.header-warpp{
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 4;
+  -webkit-box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
+box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
+}
 
 header nav {
     font-family: 'Hartwell';
@@ -516,6 +529,15 @@ header img.logo {
 }
 
 .banner-img {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.banner-img:hover {
     position: absolute !important;
     left: 0;
     right: 0;
@@ -660,7 +682,7 @@ header img.logo {
 
 .appartements .container .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -1809,7 +1831,7 @@ background-size: cover;
 
 .appartements .container .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -2258,7 +2280,9 @@ background-size: cover;
 }
 @media (min-width : 768px) {
 
-
+  main {
+      padding-top: 83px;
+  }
   .actualites-singlec blockquote {
 padding: 20px 20px;
 }
@@ -2280,7 +2304,7 @@ bottom: 25px;
     }
 
     .banner {
-        width: 90%;
+        width: 100%;
     }
     .actualites-singlec .title .media img {
         margin-bottom: 0px;
@@ -2392,8 +2416,36 @@ bottom: 25px;
 }
 
 @media (min-width: 992px) {
-
-
+  main {
+      padding-top: 96px;
+  }
+  .header-warpp .container{
+    width: 100%
+  }
+  .gryff:hover .banner-img {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+  }
+  .gryff .banner-img {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+  }
+  .text-warpAnimated{
+    position: relative;
+  }
+  .text-warpAnimated p{
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+  }
+  .gryff:hover .text-warpAnimated p{
+  top:0;
+  opacity: 1;
+  }
     .container {
         width: 90%;
     }
@@ -2488,7 +2540,7 @@ bottom: 25px;
 
     header {
         width: 90%;
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .footer footer .container-fluid {
@@ -2573,6 +2625,10 @@ bottom: 25px;
         margin: 10px auto;
     }
 
+    .header-warpp .container {
+        width: 90%;
+        max-width: 100%;
+    }
     .footer-slider-wrapper .absolute {
         position: absolute;
         bottom: 50px;
@@ -2590,7 +2646,7 @@ bottom: 25px;
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .8rem;
         padding-left: .8rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .vivre .title h2 {
@@ -3816,4 +3872,28 @@ background-size: cover;
 .childsliderfirst .slick-track ,.childsliderthird {
 display: flex !important;
 align-items: center;
+}
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: .7rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.visite{
+  margin-top: 80px
+}
+.visite a{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin-top: 20px;
+}
+.visite a:hover .gatsby-image-wrapper{
+transform: scale(1.08);
+}
+.visite .gatsby-image-wrapper  {
+    transition: all 0.3s ease-in-out 0s;
 }
