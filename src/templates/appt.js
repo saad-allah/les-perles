@@ -170,13 +170,22 @@ const AppPost = ({ data }) => {
                 </div>
                 <div className="slide wrap">
                   <div className="childslidersec childslider _vis">
-                  <div
+                  <div className="slide"
            dangerouslySetInnerHTML={{
              __html: wordpressWpAppartement.acf.code_iframe
            }}
          />
                   </div>
-
+                  <div className="arrows">
+                    <ul>
+                      <li className="prev8">
+                        <img src={Left} alt="" />
+                      </li>
+                      <li className="next8">
+                        <img src={Right} alt="" />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
               </div>
