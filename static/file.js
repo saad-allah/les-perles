@@ -1781,12 +1781,14 @@ function _dhhx(){
   }
 
 
-
   //nested
 
   // galerie
   if ($(".childsliderfirst")[0]) {
+
     $(document).ready(function () {
+      setTimeout(function() {
+
       $('.childsliderfirst').slick({
 
 
@@ -1986,8 +1988,9 @@ function _dhhx(){
 
 
       });
-
+  }, 1000);
     });
+
   }
 
 
@@ -2001,6 +2004,7 @@ function _dhhx(){
   // galerie
   if ($(".slider-concepts")[0]) {
     $(document).ready(function () {
+            setTimeout(function() {
       $('.slider-concepts').slick({
 
 
@@ -2200,7 +2204,7 @@ function _dhhx(){
 
 
       });
-
+  }, 1000);
     });
   }
 
@@ -2209,6 +2213,7 @@ function _dhhx(){
   // galerie
   if ($(".childsliderthird")[0]) {
     $(document).ready(function () {
+        setTimeout(function() {
       $('.childsliderthird').slick({
 
 
@@ -2409,7 +2414,7 @@ function _dhhx(){
 
 
       });
-
+  }, 1000);
     });
   }
 
