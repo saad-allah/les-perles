@@ -347,3 +347,4 @@ if (window.performance) {
   _xd();
   }
 }
+_xd();
