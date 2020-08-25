@@ -63,7 +63,7 @@ const Visite = () => {
 
     return (
 
-      <div className="visite">
+      <div className="visite-warrp">
 
         <div className="container">
           <div className="row">
