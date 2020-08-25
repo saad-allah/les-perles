@@ -46,8 +46,10 @@ export default ({ data }) => {
                           {data.wordpressAcfPages.acf.la_place_centrale_title}
                         </span>
                       </p>
+                        <div className="text-warpAnimated">
                       <p>{data.wordpressAcfPages.acf.la_place_centrale_desc}</p>
                     </div>
+                      </div>
 
                     <div className="overlay"></div>
                   </div>
@@ -73,10 +75,12 @@ export default ({ data }) => {
                           }
                         </span>
                       </p>
+                                      <div className="text-warpAnimated">
                       <p>
                         {data.wordpressAcfPages.acf.la_place_commerciale_desc}
                       </p>
                     </div>
+                      </div>
                   </div>
                 </div>
                 <div className="tall">
@@ -99,8 +103,10 @@ export default ({ data }) => {
                           {data.wordpressAcfPages.acf.le_park_urbain_title}
                         </span>
                       </p>
+                        <div className="text-warpAnimated">
                       <p>{data.wordpressAcfPages.acf.le_park_urbain_desc}</p>
                     </div>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -125,8 +131,10 @@ export default ({ data }) => {
                       <p>
                         <span>{data.wordpressAcfPages.acf.acima_title}</span>
                       </p>
+                      <div className="text-warpAnimated">
                       <p>{data.wordpressAcfPages.acf.acima_desc}</p>
                     </div>
+                          </div>
                   </div>
                   <div className="gryff img-5">
                     <Img
@@ -147,10 +155,12 @@ export default ({ data }) => {
                           {data.wordpressAcfPages.acf.equipement_hotelier_title}
                         </span>
                       </p>
+                        <div className="text-warpAnimated">
                       <p>
                         {data.wordpressAcfPages.acf.equipement_hotelier_desc}
                       </p>
                     </div>
+                        </div>
                   </div>
                 </div>
                 <div className="wide">
@@ -173,10 +183,12 @@ export default ({ data }) => {
                           {data.wordpressAcfPages.acf.promenade_pietonne_title}
                         </span>
                       </p>
+                      <div className="text-warpAnimated">
                       <p>
                         {data.wordpressAcfPages.acf.promenade_pietonne_desc}
                       </p>
                     </div>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -196,14 +208,15 @@ export default ({ data }) => {
                 />
                 <div className="overlay"></div>
                 <div className="text">
-                  <div className="text">
+
                     <p>
                       <span>
                         {data.wordpressAcfPages.acf.le_coeur_dilot_plante_title}
                       </span>
                     </p>
+                      <div className="text-warpAnimated">
                     <p>{data.wordpressAcfPages.acf.le_coeur_dilot_desc}</p>
-                  </div>
+                      </div>
                 </div>
               </div>
             </div>
@@ -222,20 +235,24 @@ export default ({ data }) => {
                 />
                 <div className="overlay"></div>
                 <div className="text">
-                  <div className="text">
+
                     <p>
                       <span>
                         {data.wordpressAcfPages.acf.les_lots_de_terrain_title}
                       </span>
                     </p>
+                    <div className="text-warpAnimated">
                     <p>{data.wordpressAcfPages.acf.les_lots_de_terrain_desc}</p>
-                  </div>
+      </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div>
+
+</div>
     </Layout>
   );
 };

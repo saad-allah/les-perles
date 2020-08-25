@@ -43,25 +43,19 @@ export default ({ data }) => {
           <div className="container">
             <div className="row">
               <Titre />
-            </div>
+
             {dedupedCategories.map(({ node }, i) => (
-              <div key={i} className="row">
-                <div className="col-md-12">
+
+                <div className="col-lg-5 col-sm-6" key={i}>
                   <div className="title small">
                     <h3>Catégorie : {dedupedCategories[i]}</h3>
                   </div>
-                </div>
-
-                {i < 2 && (
-              <ListAppslider catName={dedupedCategories[i]} catId={i}/>
-                )}
-              {i > 1 && (
-                <ListApp catName={dedupedCategories[i]}/>
-        )}
+                    <ListApp catName={dedupedCategories[i]}/>
                 </div>
 
             ))}
           </div>
+            </div>
         </div>
       </Layout>
     )
