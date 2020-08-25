@@ -1557,7 +1557,6 @@ function _dhhx(){
         infinite: true,
 
         arrows: false,
-
         loop: false,
 
         autoplay: false,
@@ -1595,6 +1594,9 @@ function _dhhx(){
         arrows: false,
 
         loop: false,
+        fade: true,
+           speed: 500,
+           cssEase: 'linear',
 
         autoplay: false,
 
@@ -2414,7 +2416,7 @@ function _dhhx(){
 
 
       });
-  }, 1000);
+  }, 2000);
     });
   }
 
