@@ -422,7 +422,7 @@ header {
     width: 100%;
 }
 main{
-  padding-top: 70px;
+  padding-top: 60px;
 }
 .header-warpp{
   position: fixed;
@@ -477,7 +477,7 @@ header img.logo {
 }
 
 .banner.home {
-    height: 500px;
+    height: 84vh;
 }
 
 
@@ -2286,11 +2286,29 @@ background-size: cover;
 .sitemap img {
     width: 100%;
 }
+@media (min-width : 768px) and (min-height : 1000px){
+
+
+  .banner.home {
+    height: 60vh;
+}
+}
+@media (min-height: 1000px) and (min-width: 999px){
+.banner.home {
+    height: 74vh;
+}
+}
+@media (min-height: 1000px) and (min-width: 1200px){
+.banner.home {
+    height: 84vh;
+}
+}
 @media (min-width : 768px) {
 
   main {
-      padding-top: 83px;
+      padding-top: 80px;
   }
+
   .actualites-singlec blockquote {
 padding: 20px 20px;
 }
@@ -3940,3 +3958,31 @@ align-items: center
   object-position: center center;
   opacity: 1;
 }
+
+#___loader img{
+  width: 200px;
+  -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out;
+    -moz-animation: pulse 3s infinite ease-in-out;
+    animation: pulse 3s infinite ease-in-out;
+}
+@-webkit-keyframes pulse {
+   0% { -webkit-transform: scale(0.9); opacity: 0.7; }
+   50% { -webkit-transform: scale(1); opacity: 1; }
+   100% { -webkit-transform: scale(0.9); opacity: 0.7; }
+ }
+
+ @keyframes pulse {
+   0% { transform: scale(0.9); opacity: 0.7; }
+   50% { transform: scale(1); opacity: 1; }
+   100% { transform: scale(0.9); opacity: 0.7; }
+ }
+
+ @media (min-device-width:314px) and (max-device-width:767px) and (orientation:landscape){
+
+
+   .banner.home {
+    height: 400px;
+}
+ }
