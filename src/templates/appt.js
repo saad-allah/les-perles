@@ -124,7 +124,7 @@ const AppPost = ({ data }) => {
             <div className="col-md-9">
               <div className="slidernested">
                 <div className="slide wrap">
-                  <div className="childsliderfirst childslider">
+                  <div className="childsliderfirst childslider _1s">
                     {wordpressWpAppartement.acf.appartement_image_galerie.map(
                       (item,i) => (
                         <div
@@ -148,7 +148,7 @@ const AppPost = ({ data }) => {
                   </div>
                 </div>
                 <div className="slide wrap">
-                  <div className="childsliderthird">
+                  <div className="childsliderthird _2s">
                     {wordpressWpAppartement.acf.etage_image_galerie.map(
                       (item) => (
                         <div className="slide" key={item.etage.localFile.id}>
