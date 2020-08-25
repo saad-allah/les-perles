@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
         zIndex: 5555,
       }}
    >
-  <img src="/lesperles-logo.png" className="logo"/>
+  <img src="/lesperles-logo.png" className="logo" alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'/>
    </div>
         <Header siteTitle={data.site.siteMetadata.title} />
 

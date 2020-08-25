@@ -23,7 +23,7 @@ const ParagraphProjet = () => (
         <div className="map-wrapper">
              <div id="map">
                <div className="maptop">
-                 <span className="controle-btn show"><img src={Cycle} id="show" alt="/" />
+                 <span className="controle-btn show"><img src={Cycle} id="show" alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" />
                    <div id="kimono-sunAnimatorMenu" className="dropup open">
                      <div id="kimono-sunAnimator" role="menu" className="dropdown-menu dropdown-menu-left">
                        <div className="kimono-dropdownTitle">
@@ -62,7 +62,7 @@ const ParagraphProjet = () => (
                        </div>
                      </div>
                    </div></span>
-                 <span className="controle-btn fullScreen"><img src={Full} alt="/" /></span>
+                 <span className="controle-btn fullScreen"><img src={Full} alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" /></span>
                </div>
                <div className="controle-main">
                  <span className="controle-btn">
@@ -73,10 +73,10 @@ const ParagraphProjet = () => (
 
                    </div>
                  </span>
-                 <span className="controle-btn up"><img src={Upmap} alt="/" /></span>
-                 <span className="controle-btn down"><img src={Dwnmap} alt="/" /></span>
-                 <span className="controle-btn zoomout"><img src={Outmap} alt="/" /></span>
-                 <span className="controle-btn zoomin"><img src={Inmap} alt="/" /></span>
+                 <span className="controle-btn up"><img src={Upmap} alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" /></span>
+                 <span className="controle-btn down"><img src={Dwnmap} alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" /></span>
+                 <span className="controle-btn zoomout"><img src={Outmap} alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" /></span>
+                 <span className="controle-btn zoomin"><img src={Inmap} alt="alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'" /></span>
                </div>
              </div>
            </div>
