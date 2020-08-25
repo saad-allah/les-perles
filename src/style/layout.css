@@ -429,7 +429,7 @@ main{
   left: 0;
   right: 0;
   background: white;
-  z-index: 4;
+  z-index: 555;
   -webkit-box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
 -moz-box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
 box-shadow: 0px 2px 36px -12px rgba(0,0,0,0.5);
@@ -3881,19 +3881,19 @@ align-items: center;
     border: 1px solid transparent;
     border-radius: .25rem;
 }
-.visite{
+.visite-warrp{
   margin-top: 80px
 }
-.visite a{
+.visite-warrp a{
   width: 100%;
   position: relative;
   overflow: hidden;
   display: block;
   margin-top: 20px;
 }
-.visite a:hover .gatsby-image-wrapper{
+.visite-warrp a:hover .gatsby-image-wrapper{
 transform: scale(1.08);
 }
-.visite .gatsby-image-wrapper  {
+.visite-warrp .gatsby-image-wrapper  {
     transition: all 0.3s ease-in-out 0s;
 }
