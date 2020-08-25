@@ -342,9 +342,5 @@ function _xd(){
 
       }
 }
-if (window.performance) {
-  if (performance.navigation.type == 1) {
-  _xd();
-  }
-}
+
 _xd();
