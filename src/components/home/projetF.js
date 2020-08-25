@@ -76,12 +76,12 @@ const ProjetF = () => (
                 </div>
                 <div className="text">
                   <p>{data.wordpressAcfPages.acf.home_p_concept_text}</p>
-                  <Link
-                    className="button"
-                    to={`/${data.wordpressAcfPages.acf.home_p_concept_link}`}
+                  <a
+                    className="button" target="_blank"
+                    href={data.wordpressAcfPages.acf.home_p_concept_link}
                   >
                     {data.wordpressAcfPages.acf.home_p_concept_button}
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

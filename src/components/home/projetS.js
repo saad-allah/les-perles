@@ -53,7 +53,7 @@ const ProjetS = () => (
                 <p>{data.wordpressAcfPages.acf.home_vp_text}</p>
                 <Link
                   className="button"
-                  to={`/${data.wordpressAcfPages.acf.home_vp_link}`}
+                  to={data.wordpressAcfPages.acf.home_vp_link}
                 >
                   {data.wordpressAcfPages.acf.home_vp_button}
                 </Link>
