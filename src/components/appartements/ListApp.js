@@ -43,9 +43,9 @@ const AppLists = ({ catName }) => (
         <>
           {appList.map(({ node }, i) => (
             <>
-              {i < 6 && (
+              {i < 1 && (
                 <div
-                  className={appList.length > 1 ? `col-lg-4 col-md-6 col-12  wrapped-here ` : `col-lg-4 col-md-6 col-12  wrapped-here solo `}
+                  className={appList.length > 1 ? `  wrapped-here ` : `  wrapped-here solo `}
                   key={i}
                 >
                   <div className="img">
@@ -74,25 +74,21 @@ const AppLists = ({ catName }) => (
                       <span>Superficie totale : </span>
                       {node.acf.superficie_totale}
                     </p>
-
-                    <Link className="buttons" to={`/appartements/${node.slug}`}>
-                      En savoir plus
-                    </Link>
                   </div>
                 </div>
               )}
             </>
           ))}
 
-          {appList.length > 6 && (
-            <div className="col-md-12">
+
+
               <div className="hasMore-warpp">
                 <Link className="hasMore" to={`/appartements/type/${catName}`}>
                   Voir plus
                 </Link>
               </div>
-            </div>
-          )}
+
+
         </>
       );
     }}
