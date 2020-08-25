@@ -1997,11 +1997,13 @@ background-size: cover;
     height: 100%;
     background-color: black;
     opacity: .3;
+    cursor: pointer;
 }
 
 .navfornested .wrappero .text {
     position: relative;
     z-index: 10;
+    cursor: pointer;
 }
 
 .navfornested .wrappero .text p {
@@ -3896,4 +3898,18 @@ transform: scale(1.08);
 }
 .visite-warrp .gatsby-image-wrapper  {
     transition: all 0.3s ease-in-out 0s;
+}
+._vis .slick-list, ._vis .slick-track {
+    width: 100% !important;
+    height: 100% !important;
+}
+._vis iframe ,._vis p{
+  width: 100%;
+  height: 100%;
+}
+.scene-Arrow ,.scene-Arrow svg,#sceneArrowRight{
+  display: none  !important;
+}
+#scenelist-crystal .scene-Arrow_Icon{
+    display: none  !important;
 }
