@@ -131,8 +131,12 @@ const AppPost = ({ data }) => {
                           className="slide"
                           key={i}
                         >
-                          <img src={item.appartement.source_url} alt="" />
+                        <div className="slide-warpp">
+
+                          <img src={item.appartement.source_url} alt="/" className="appt-single" />
+                          <img src="/placeholder.jpg" alt="/"  />
                         </div>
+                            </div>
                       )
                     )}
                   </div>
@@ -152,8 +156,12 @@ const AppPost = ({ data }) => {
                     {wordpressWpAppartement.acf.etage_image_galerie.map(
                       (item) => (
                         <div className="slide" key={item.etage.localFile.id}>
-                          <img src={item.etage.source_url} alt="" />
+                          <div className="slide-warpp">
+                          <img src={item.etage.source_url} alt="/" className="appt-single" />
+                          <img src="/placeholder.jpg" alt="/" />
+
                         </div>
+                          </div>
                       )
                     )}
                   </div>
