@@ -3914,3 +3914,14 @@ transform: scale(1.08);
 #scenelist-crystal .scene-Arrow_Icon{
     display: none  !important;
 }
+
+._1s .slide,._1s .slick-track,._1s .slick-list {
+height: 100% !important;
+display: flex !important;
+align-items: center
+}
+._2s .slide,._2s .slick-track,._2s .slick-list {
+height: 100% !important;
+display: flex !important;
+align-items: center
+}
