@@ -21,8 +21,8 @@ export default class Header extends React.Component {
   render() {
     let menuOpen = this.state.open ? " open" : "";
     return (
-
-      <header>
+<div className="header-warpp">
+      <header className="container">
         <nav className="navbar navbar-expand-lg navbar-light" id="se-navbar">
 
               <Logo />
@@ -46,5 +46,6 @@ export default class Header extends React.Component {
 
         </nav>
     </header>
+  </div>
     );
   }}
