@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
 import Banner from "../components/lesperles/banner";
+import Scripts from "../components/scripts/script";
 import Paragraph from "../components/lesperles/content";
 import {SEO} from "../components/seo";
 
@@ -20,6 +21,7 @@ export default ({ data }) => {
               imageTwitter={data.wordpressPage.yoast.twitter_image.localFile.childImageSharp.resize.src}
               />
       <Banner />
+        <Scripts />
       <div className="vivre">
         <div className="container">
           <div className="row">
