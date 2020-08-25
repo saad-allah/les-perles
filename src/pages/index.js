@@ -5,6 +5,7 @@ import Banner from "../components/home/banner";
 import Paragraph from "../components/home/content";
 import ProjetF from "../components/home/projetF";
 import ProjetS from "../components/home/projetS";
+import Visite from "../components/home/virtuelle";
 import Appratements from "../components/home/appratement";
 import Galerie from "../components/home/galerie";
 import Contact from "../components/home/contact";
@@ -29,6 +30,7 @@ export default ({ data }) => {
   <Paragraph />
     <ProjetF />
         <ProjetS />
+          <Visite />
                 <Appratements />
                         <Galerie />
                                       <Contact />
