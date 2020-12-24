@@ -3,7 +3,9 @@
 
 /*style*/
 
-
+#___loader{
+	display: flex !important;
+}
 
 /* INDEX.CSS */
 @font-face {
