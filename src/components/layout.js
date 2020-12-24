@@ -1,53 +1,45 @@
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
+
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import Footer from "./footer"
+import { useStaticQuery, graphql } from "gatsby"
+import "./layout.css"
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../style/layout.css";
-
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `}
-    render={data => (
-      <>
+    }
+  `)
+
+  return (
+    <>
       <div
-      key={`loader`}
-      id="___loader"
-      style={{
-        alignItems: "center",
-        backgroundColor: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        position: "fixed",
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 5555,
-      }}
-   >
-  <img src="/lesperles-logo.png" className="logo" alt='Portail, Immobilier, Maroc, Casablanca, El Jadida, Rabat, Marrakech, Tanger, Appartement, Location, Achat, propriété, résidence fermée,appartements R+6 R+8'/>
-   </div>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          height: `100vh`,
+    padding: `0`,
+    display: `flex`,
+    alignItems: `center`,
+    justifyContent: `center`,
+        }}
+      >
+        <main>{children}</main>
 
-          <main>{children}</main>
-          <Footer />
-
-      </>
-    )}
-  />
-)
+      </div>
+    </>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
