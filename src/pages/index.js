@@ -15,8 +15,7 @@ import {SEO} from "../components/seo";
 export default ({ data }) => {
   return (
     <Layout>
-   
-     <div id="container"><img src="https://lesperles.ma/static/5e8829e8d064dc1cd1b7c49dfd48ea59/46604/lesperles-logo.png" /></div>
+       
 
     </Layout>
   );
