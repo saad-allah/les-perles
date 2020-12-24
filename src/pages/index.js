@@ -15,7 +15,25 @@ import {SEO} from "../components/seo";
 export default ({ data }) => {
   return (
     <Layout>
-       
+          <Scripts />
+          <SEO
+                    title={data.wordpressPage.title}
+                    titlefb={data.wordpressPage.yoast.opengraph_title}
+                    titletwitter={data.wordpressPage.yoast.twitter_title}
+                    description={data.wordpressPage.yoast.metadesc}
+                    descriptionFb={data.wordpressPage.yoast.opengraph_description}
+                    descriptionTwitter={data.wordpressPage.yoast.twitter_description}
+                    imageFb={data.wordpressPage.yoast.opengraph_image.localFile.childImageSharp.resize.src}
+                    imageTwitter={data.wordpressPage.yoast.twitter_image.localFile.childImageSharp.resize.src}
+                    />
+  <Banner />
+  <Paragraph />
+    <ProjetF />
+        <ProjetS />
+          <Visite />
+                <Appratements />
+                        <Galerie />
+                                      <Contact />
 
     </Layout>
   );
@@ -62,3 +80,4 @@ query {
   }
 }
 `;
+
